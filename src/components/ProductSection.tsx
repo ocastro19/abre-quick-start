@@ -45,7 +45,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             />
           </div>
 
-          <h3 className="text-2xl font-black mb-1">EAGLEBOOST</h3>
+          <h3 className="text-4xl font-black mb-1">EAGLEBOOST</h3>
           <p className="text-white text-sm font-medium mb-3">6 BOTTLE PACKAGE</p>
           
           <p className="text-yellow-400 text-lg font-bold mb-4">YOU'RE SAVING $300</p>
