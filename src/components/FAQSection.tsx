@@ -45,37 +45,37 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-8 px-4 bg-white">
-      <div className="max-w-2xl mx-auto">
+    <section className="py-6 px-4 bg-white">
+      <div className="max-w-xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-4">
+          <h2 className="text-xl font-bold text-gray-900 mb-1">
             Frequently Asked Questions
           </h2>
-          <div className="w-16 h-1 bg-red-600 mx-auto rounded-full"></div>
+          <div className="w-12 h-0.5 bg-red-600 mx-auto rounded"></div>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-3">
+        <div className="space-y-2">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="border border-gray-200 rounded-lg bg-white"
               >
-                <AccordionTrigger className="px-4 py-4 text-left hover:no-underline group">
-                  <span className="text-base md:text-lg font-semibold text-gray-900 pr-4 group-hover:text-blue-600 transition-colors">
+                <AccordionTrigger className="px-3 py-3 text-left hover:no-underline">
+                  <span className="text-sm font-semibold text-gray-900 pr-2">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="px-4 pb-4 pt-0">
-                  <div className="space-y-3">
-                    <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+                <AccordionContent className="px-3 pb-3 pt-0">
+                  <div className="space-y-2">
+                    <p className="text-gray-700 text-sm leading-relaxed">
                       {faq.answer}
                     </p>
                     <div className="inline-block">
-                      <span className="bg-red-600 text-white px-3 py-1.5 rounded-full text-xs md:text-sm font-bold inline-flex items-center gap-2">
+                      <span className="bg-red-600 text-white px-2 py-1 rounded-full text-xs font-bold inline-flex items-center gap-1">
                         <span className="text-green-300">✓</span>
                         {faq.badge}
                       </span>
