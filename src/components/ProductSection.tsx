@@ -72,7 +72,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
           </div>
 
           {/* Payment Methods */}
-          <div className="bg-white rounded-lg p-1">
+          <div className="bg-white rounded-lg p-0.5">
             <img 
               src={paymentCardsImage} 
               alt="Accepted Payment Methods" 
