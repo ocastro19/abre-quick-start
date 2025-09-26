@@ -26,12 +26,13 @@ const ReadySuccessCTA = () => {
           <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-green-600 rounded-2xl blur-sm opacity-75 animate-pulse"></div>
           <Button
             onClick={handleClick}
-            className="relative w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl text-base"
+            variant="cta-success"
+            className="relative px-6"
             style={{ touchAction: "manipulation" }}
           >
             <div className="flex items-center justify-center gap-3">
-              <span className="text-xl">🚀</span>
-              <span className="leading-tight text-center">
+              <span className="text-2xl">🚀</span>
+              <span className="leading-tight text-center font-bold">
                 I'm ready to be the next success story!
               </span>
             </div>

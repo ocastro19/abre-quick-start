@@ -11,10 +11,10 @@ const FinalCTASection = () => {
           Join thousands of men who have already experienced the EagleBoost difference
         </p>
         <div className="relative inline-block">
-          <div className="absolute -inset-1 bg-gradient-to-r from-red-400 to-red-600 rounded-3xl blur-sm opacity-75 animate-pulse"></div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-red-400 to-red-600 rounded-2xl blur-sm opacity-75 animate-pulse"></div>
           <Button 
-            size="lg" 
-            className="relative bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-extrabold py-8 px-12 rounded-3xl text-xl min-h-[90px] shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95"
+            variant="cta-primary"
+            className="relative px-12 min-h-[80px] text-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
             onClick={() => {
               const targetElement = document.getElementById("six-bottle-package");
               if (targetElement) {

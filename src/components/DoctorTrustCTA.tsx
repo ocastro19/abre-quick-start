@@ -23,15 +23,16 @@ const DoctorTrustCTA = () => {
       <div className="text-center">
         {/* Main CTA Button */}
         <div className="relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl blur-sm opacity-75 animate-pulse"></div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-sm opacity-75 animate-pulse"></div>
           <Button
             onClick={handleClick}
-            className="relative w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-8 rounded-3xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-2xl text-lg min-h-[80px]"
+            variant="cta-primary"
+            className="relative px-6"
             style={{ touchAction: "manipulation" }}
           >
-            <div className="flex items-center justify-center gap-4">
-              <span className="text-3xl">👨‍⚕️</span>
-              <span className="leading-tight text-center font-extrabold text-xl">
+            <div className="flex items-center justify-center gap-3">
+              <span className="text-2xl">👨‍⚕️</span>
+              <span className="leading-tight text-center font-bold">
                 If doctors trust it, I trust it too — start my treatment now
               </span>
             </div>

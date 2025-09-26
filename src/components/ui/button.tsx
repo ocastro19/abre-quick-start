@@ -18,6 +18,9 @@ const buttonVariants = cva(
         hero: "bg-gradient-hero text-primary-foreground font-semibold shadow-hero hover:shadow-elegant transform hover:scale-105 transition-smooth border border-gold/20",
         institutional: "bg-primary text-primary-foreground hover:bg-primary-light shadow-elegant font-medium",
         gold: "bg-gold text-gold-foreground hover:bg-gold/90 font-semibold shadow-card",
+        "cta-primary": "w-full font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl min-h-[70px] text-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white",
+        "cta-success": "w-full font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl min-h-[70px] text-lg bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white",
+        "cta-warning": "w-full font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl min-h-[70px] text-lg bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -52,7 +52,8 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
           
           <Button
             onClick={() => handlePurchaseClick("6-bottle")}
-            className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-black py-3 text-base rounded-xl mb-3"
+            variant="cta-warning"
+            className="mb-3 min-h-[60px] text-base"
             id="six-bottle-package"
           >
             CLAIM OFFER NOW
@@ -105,7 +106,8 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             
             <Button
               onClick={() => handlePurchaseClick("3-bottle")}
-              className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 text-sm rounded-lg mb-2"
+              variant="cta-warning"
+              className="mb-2 min-h-[50px] text-sm"
             >
               BUY NOW
             </Button>
@@ -146,7 +148,8 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             
             <Button
               onClick={() => handlePurchaseClick("2-bottle")}
-              className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 text-sm rounded-lg mb-2"
+              variant="cta-warning"
+              className="mb-2 min-h-[50px] text-sm"
             >
               BUY NOW
             </Button>
