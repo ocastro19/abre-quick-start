@@ -1,0 +1,42 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
+const Dws1 = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.hj) {
+      window.hj('event', 'downsell_1_viewed');
+    }
+  }, []);
+
+  const handleAccept = () => {
+    // Discounted offer
+    window.location.href = "https://pagamento.paybluedrops.com/checkout/downsell1:1";
+  };
+
+  const handleDecline = () => {
+    navigate('/thankyou');
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-white flex items-center justify-center p-4">
+      <div className="max-w-md mx-auto text-center">
+        <h1 className="text-2xl font-bold text-purple-900 mb-4">Last Chance - Special Discount</h1>
+        <p className="text-purple-700 mb-6">Don't miss this final opportunity to try BlueDrops at a reduced price</p>
+        
+        <div className="space-y-4">
+          <Button onClick={handleAccept} className="w-full bg-purple-600 hover:bg-purple-700">
+            Take Discount
+          </Button>
+          <Button onClick={handleDecline} variant="outline" className="w-full">
+            No Thanks
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Dws1;
