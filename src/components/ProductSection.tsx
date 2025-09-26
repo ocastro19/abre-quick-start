@@ -39,7 +39,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             <img 
               src={bottlesImage} 
               alt="BlueDrops 6 Bottle Package" 
-              className="max-w-[200px] h-auto"
+              className="w-full max-w-[300px] h-auto"
             />
           </div>
 
