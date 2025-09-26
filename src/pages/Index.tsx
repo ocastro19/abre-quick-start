@@ -185,7 +185,14 @@ const Index = () => {
         {/* Content that shows after video or in admin mode */}
         {(showContent || isAdminMode || isBoltMode) && (
           <>
-            {/* Doctors Section - ANTES das ofertas */}
+            {/* Product Offers Section - LOGO APÓS O VSL */}
+            <ProductSection 
+              showPurchaseButton={showPurchaseButton}
+              onPurchase={handlePurchase}
+              onSecondaryPackageClick={handleSecondaryPackageClick}
+            />
+
+            {/* Doctors Section - DEPOIS das ofertas */}
             <DoctorsSection />
 
             {/* Doctor Trust CTA - Logo após os médicos */}
@@ -202,13 +209,6 @@ const Index = () => {
 
             {/* Guarantee Dropdown */}
             <GuaranteeDropdown />
-
-            {/* Product Offers Section - DEPOIS dos médicos */}
-            <ProductSection 
-              showPurchaseButton={showPurchaseButton}
-              onPurchase={handlePurchase}
-              onSecondaryPackageClick={handleSecondaryPackageClick}
-            />
 
             {/* Footer */}
             <Footer />
