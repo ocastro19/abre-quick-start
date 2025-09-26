@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Star } from "lucide-react";
 import johnOTestimonialImage from "@/assets/john-o-testimonial.jpg";
 import michaelRTestimonialImage from "@/assets/michael-r-testimonial.jpg";
+import robertSTestimonialImage from "@/assets/robert-s-testimonial.jpg";
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,6 +25,15 @@ const TestimonialsSection = () => {
       stars: 5,
       verified: true,
       videoIframe: `<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_68c44ad81b231e3484f1d247_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;"> <div style="position: relative; padding: 100% 0 0 0;" id="ifr_68c44ad81b231e3484f1d247_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68c44ad81b231e3484f1d247" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68c44ad81b231e3484f1d247/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>`
+    },
+    {
+      name: "Robert S.",
+      location: "California", 
+      image: robertSTestimonialImage,
+      quote: "After 50, I thought there was no hope. EagleBoost proved me wrong!",
+      stars: 5,
+      verified: true,
+      videoIframe: `<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_68c44afb02d156008ff05b9b_wrapper" style="margin: 0 auto; width: 100%; "> <div style="position: relative; padding: 74.28571428571429% 0 0 0;" id="ifr_68c44afb02d156008ff05b9b_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68c44afb02d156008ff05b9b" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68c44afb02d156008ff05b9b/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>`
     }
   ];
 
