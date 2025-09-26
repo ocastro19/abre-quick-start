@@ -110,13 +110,13 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
       </div>
 
       {/* Carousel Container */}
-      <div className="relative w-full max-w-sm mx-auto mb-8">
+      <div className="relative w-full max-w-sm mx-auto mb-6">
         {/* Cards Container */}
         <div 
           className="relative overflow-visible"
           style={{
             height: 'auto',
-            minHeight: '400px',
+            minHeight: '350px',
             padding: '0 16px'
           }}
         >
@@ -134,11 +134,11 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
                 }}
                 onClick={() => setCurrentIndex(index)}
               >
-                <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-4 sm:p-6 w-full">
+                <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-3 w-full">
                   {/* Doctor Info Row - Photo left, Info right */}
-                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="flex items-start gap-3 mb-3">
                     {/* Doctor Photo */}
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-blue-200 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-200 flex-shrink-0">
                       <img 
                         src={doctor.image} 
                         alt={doctor.name}
@@ -148,13 +148,13 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
                     
                     {/* Doctor Info */}
                     <div className="flex-1">
-                      <h3 className="font-bold text-blue-900 text-lg sm:text-xl mb-1">{doctor.name}</h3>
-                      <p className="text-blue-600 text-xs sm:text-sm mb-1">{doctor.title}</p>
-                      <p className="text-blue-500 text-xs sm:text-sm mb-2 sm:mb-3">{doctor.hospital && doctor.hospital}</p>
+                      <h3 className="font-bold text-blue-900 text-base mb-0.5">{doctor.name}</h3>
+                      <p className="text-blue-600 text-xs mb-0.5">{doctor.title}</p>
+                      <p className="text-blue-500 text-xs mb-2">{doctor.hospital && doctor.hospital}</p>
                       
                       {doctor.verified && (
                         <div>
-                          <span className="bg-green-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-bold">
+                          <span className="bg-green-500 text-white px-2 py-0.5 rounded-full text-xs font-bold">
                             ✓ VERIFIED
                           </span>
                         </div>
@@ -163,8 +163,8 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
                   </div>
                   
                   {/* Quote Section */}
-                  <div className="bg-blue-50 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
-                    <p className="text-blue-800 text-sm sm:text-base font-medium italic leading-relaxed">
+                  <div className="bg-blue-50 rounded-lg p-2 mb-3">
+                    <p className="text-blue-800 text-xs font-medium italic leading-snug">
                       "{doctor.quote}"
                     </p>
                   </div>
@@ -173,6 +173,9 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
                   {doctor.videoIframe && (
                     <div 
                       className="w-full rounded-lg overflow-hidden"
+                      style={{
+                        maxHeight: '200px'
+                      }}
                       dangerouslySetInnerHTML={{__html: doctor.videoIframe}}
                     />
                   )}
@@ -183,15 +186,15 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
         </div>
 
         {/* Navigation Dots - Posicionamento fixo */}
-        <div className="flex justify-center gap-3 mt-6">
+        <div className="flex justify-center gap-3 mt-4">
           {doctors.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full font-bold text-sm sm:text-base transition-all duration-300 ${
+              className={`w-8 h-8 rounded-full font-bold text-sm transition-all duration-300 ${
                 index === currentIndex
-                  ? 'bg-blue-600 text-white shadow-lg scale-110'
-                  : 'bg-blue-100 text-blue-600 hover:bg-blue-200 hover:scale-105'
+                  ? 'bg-blue-600 text-white shadow-lg scale-105'
+                  : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
               }`}
             >
               {index + 1}
@@ -201,7 +204,7 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
       </div>
 
       {/* Medical Advisory Board Badge */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4 text-center">
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-center">
         <div className="text-blue-600 text-sm font-bold mb-1">
           🏥 Medical Advisory Board
         </div>
