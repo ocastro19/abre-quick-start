@@ -186,7 +186,7 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
         </div>
 
         {/* Navigation Dots - Posicionamento fixo */}
-        <div className="flex justify-center gap-3 mt-4">
+        <div className="flex justify-center gap-3 mt-8 mb-6">
           {doctors.map((_, index) => (
             <button
               key={index}
