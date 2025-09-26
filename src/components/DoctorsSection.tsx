@@ -113,7 +113,7 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
       <div className="relative w-full max-w-sm mx-auto mb-6">
         {/* Cards Container */}
         <div 
-          className="relative overflow-visible"
+          className="relative overflow-visible mb-6"
           style={{
             height: 'auto',
             minHeight: '350px',
@@ -185,16 +185,16 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
           })}
         </div>
 
-        {/* Navigation Dots - Posicionamento fixo */}
-        <div className="flex justify-center gap-3 mt-8 mb-6">
+        {/* Navigation Dots - Bem visíveis abaixo dos cards */}
+        <div className="flex justify-center gap-4 py-4">
           {doctors.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-8 h-8 rounded-full font-bold text-sm transition-all duration-300 ${
+              className={`w-12 h-12 rounded-full font-bold text-base transition-all duration-300 shadow-md ${
                 index === currentIndex
-                  ? 'bg-blue-600 text-white shadow-lg scale-105'
-                  : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
+                  ? 'bg-blue-600 text-white shadow-lg transform scale-110'
+                  : 'bg-white text-blue-600 border-2 border-blue-200 hover:bg-blue-50 hover:border-blue-300'
               }`}
             >
               {index + 1}
