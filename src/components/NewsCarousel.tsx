@@ -63,7 +63,7 @@ const NewsCarousel = () => {
   };
 
   return (
-    <section className="w-full max-w-md mx-auto px-4 mt-12 mb-8">
+    <section className="w-full max-w-md mx-auto px-4 mt-12 mb-4">
       {/* Header */}
       <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-blue-900 mb-1">
@@ -82,9 +82,9 @@ const NewsCarousel = () => {
 
       {/* Carousel Container */}
       <div 
-        className="relative w-full max-w-sm mx-auto overflow-visible mb-6"
+        className="relative w-full max-w-sm mx-auto overflow-visible mb-4"
         style={{
-          height: '420px',
+          height: '360px',
           padding: '0 32px',
           maxWidth: 'min(400px, 100vw)'
         }}
@@ -103,10 +103,10 @@ const NewsCarousel = () => {
               }}
               onClick={() => setCurrentIndex(index)}
             >
-              <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-6 h-full max-h-96">
+              <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-4 h-full max-h-80">
                 {/* News Outlet Header */}
-                <div className="text-center mb-6">
-                  <div className="flex items-center justify-center gap-2 mb-4">
+                <div className="text-center mb-4">
+                  <div className="flex items-center justify-center gap-2 mb-3">
                     <img 
                       src={article.logo} 
                       alt={`${article.outlet} logo`} 
@@ -116,14 +116,14 @@ const NewsCarousel = () => {
                 </div>
                 
                 {/* Article Title */}
-                <div className="mb-4">
-                  <h4 className="text-blue-900 text-lg font-bold leading-tight text-left mb-4">
+                <div className="mb-3">
+                  <h4 className="text-blue-900 text-lg font-bold leading-tight text-left mb-3">
                     {article.title}
                   </h4>
                 </div>
 
                 {/* Article Preview */}
-                <div className="mb-6">
+                <div className="mb-4">
                   <p className="text-gray-700 text-sm leading-relaxed text-left">
                     {article.preview}
                   </p>
