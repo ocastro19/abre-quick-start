@@ -26,7 +26,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    // Initialize global tracking functions for BlueDrops
+    // Initialize global tracking functions for EagleBoost
     const initializeTracking = () => {
       // Hotjar tracking initialization (when needed)
       if (window.location.pathname === '/ftr' || window.location.pathname === '/thankyou') {

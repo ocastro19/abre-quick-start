@@ -12,11 +12,12 @@ const TransformationSection = ({
   onSecondaryPackageClick 
 }: TransformationSectionProps) => {
   return (
-    <section className="w-full max-w-md mx-auto px-4 py-6">
+    <section className="w-full max-w-sm mx-auto px-2 sm:px-3 mt-3">
       {/* Title */}
       <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-blue-900 mb-2">
-          Ready to Transform Your Life?
+        <h2 className="text-4xl font-black leading-tight mb-3">
+          <span className="text-blue-900">Ready to Transform </span>
+          <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Your Life?</span>
         </h2>
         <p className="text-blue-600 text-sm">
           Don't wait any longer. Start your transformation today.

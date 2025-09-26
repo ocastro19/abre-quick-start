@@ -3,10 +3,19 @@ const Footer = () => {
     <footer className="w-full bg-gray-50 mt-16 pb-8">
       {/* Copyright Section */}
       <div className="w-full max-w-sm mx-auto px-4 text-center">
-        <div className="space-y-3">
+        <div className="space-y-2">
+          {/* Logo */}
+          <div className="flex justify-center py-2">
+            <img 
+              src="https://i.imgur.com/HShPtzs.png" 
+              alt="Logo" 
+              className="h-16 w-auto object-contain"
+            />
+          </div>
+          
           {/* Copyright */}
           <div className="text-blue-600 text-sm font-medium">
-            Copyright ©2024 | Eagle Boost
+            Copyright ©2025 | Eagle Boost
           </div>
           <div className="text-blue-600 text-sm">
             All Rights Reserved

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== BlueDrops Design System - Health Supplement Theme ===== */
+/* ===== EagleBoost Design System - Health Supplement Theme ===== */
 @layer base {
   :root {
     /* ===== Core Colors ===== */
@@ -66,7 +66,7 @@
   }
 
   .dark {
-    /* Dark mode is not used in BlueDrops but keeping for compatibility */
+    /* Dark mode is not used in EagleBoost but keeping for compatibility */
     --background: 210 20% 6%;
     --foreground: 210 20% 98%;
     --card: 210 20% 8%;

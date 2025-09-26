@@ -1,7 +1,7 @@
 const TransformationCTA = () => {
   return (
-    <div className="w-full max-w-sm mx-auto px-4 mb-8">
-      <div className="bg-white rounded-2xl border border-blue-200 shadow-lg p-6 text-center">
+    <div className="w-full max-w-lg mx-auto px-4 mb-8">
+      <div className="bg-white rounded-2xl border border-blue-200 shadow-lg p-8 text-center">
         <h2 className="text-blue-600 text-xl font-bold mb-4">
           🚀 Your Transformation Starts Today
         </h2>

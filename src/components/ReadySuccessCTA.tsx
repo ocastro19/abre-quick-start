@@ -19,28 +19,28 @@ const ReadySuccessCTA = () => {
   };
 
   return (
-    <section className="w-full max-w-sm mx-auto px-4 mt-8 mb-8">
+    <section className="w-full max-w-sm mx-auto px-4 mt-4 mb-4">
       <div className="text-center">
         {/* Main CTA Button */}
         <div className="relative">
           <Button
             onClick={handleClick}
-            variant="cta-primary"
+            variant="cta-success"
             className="relative px-6 min-h-[80px] text-white rounded-3xl"
             style={{ touchAction: "manipulation" }}
           >
-            <span className="leading-tight text-center font-bold text-lg">
-              Start Your Doctor-Approved Treatment Tap Now!
+            <span className="leading-tight text-center font-bold text-base flex flex-col items-center justify-center">
+              <span>🚀 I'm ready to be the next success story!</span>
             </span>
           </Button>
         </div>
         
         {/* Supporting Text */}
         <div className="mt-4 space-y-2">
-          <p className="text-yellow-400 text-lg font-bold">
-            👆 Tap to start your doctor-approved treatment
+          <p className="text-sm text-blue-600 mt-4 text-center font-medium">
+            👆 Tap to start your user-approved treatment.
           </p>
-          <p className="text-blue-200 text-sm">
+          <p className="text-xs text-gray-500 mt-2 text-center">
             Clinically reviewed • MD verified • 60-day guarantee
           </p>
         </div>

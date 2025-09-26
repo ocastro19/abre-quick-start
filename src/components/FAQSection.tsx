@@ -45,14 +45,14 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-4 px-4 bg-white">
-      <div className="max-w-xl mx-auto">
+    <section className="py-8 px-1 bg-gradient-to-b from-blue-50 to-white">
+      <div className="max-w-md mx-auto">
         {/* Header */}
-        <div className="text-center mb-4">
-          <h2 className="text-xl font-bold text-gray-900 mb-1">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-blue-900 mb-2">
             Frequently Asked Questions
           </h2>
-          <div className="w-12 h-0.5 bg-red-600 mx-auto rounded"></div>
+          <div className="w-16 h-0.5 bg-blue-600 mx-auto rounded"></div>
         </div>
 
         {/* FAQ Accordion */}
@@ -62,16 +62,16 @@ const FAQSection = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-gray-200 rounded-lg bg-white"
+                className="border border-blue-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="px-3 py-3 text-left hover:no-underline">
-                  <span className="text-sm font-semibold text-gray-900 pr-2">
+                <AccordionTrigger className="px-4 py-4 text-left hover:no-underline hover:bg-blue-50">
+                  <span className="text-sm font-semibold text-blue-900 pr-2">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="px-3 pb-3 pt-0">
+                <AccordionContent className="px-4 pb-4 pt-0">
                   <div className="space-y-2">
-                    <p className="text-gray-700 text-sm leading-relaxed">
+                    <p className="text-blue-600 text-sm leading-relaxed">
                       {faq.answer}
                     </p>
                     <div className="inline-block">

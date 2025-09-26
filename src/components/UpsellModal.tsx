@@ -80,14 +80,14 @@ const UpsellModal = ({
           {/* Action Buttons */}
           <div className="space-y-3">
             <Button
-              onClick={onUpsellAccept}
+              onClick={() => window.location.href = "https://pay.geteagleboost.com/checkout/194466853:1"}
               className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 rounded-xl transform hover:scale-105 transition-all duration-300"
             >
               🚀 Yes, Upgrade to 6 Bottles & Save ${savings}!
             </Button>
             
             <Button
-              onClick={onUpsellRefuse}
+              onClick={() => window.location.href = "https://pay.geteagleboost.com/checkout/194466268:1"}
               variant="outline"
               className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-xl"
             >

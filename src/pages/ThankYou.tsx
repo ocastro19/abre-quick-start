@@ -29,20 +29,20 @@ const ThankYou = () => {
         </h1>
         
         <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-6">
-          Your BlueDrops Order is Confirmed!
+          Your EagleBoost Order is Confirmed!
         </h2>
 
         {/* Success Message */}
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-green-200 mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Heart className="w-6 h-6 text-red-500" />
-            <span className="text-lg font-semibold text-green-700">Thank you for choosing BlueDrops!</span>
+            <span className="text-lg font-semibold text-green-700">Thank you for choosing EagleBoost!</span>
             <Heart className="w-6 h-6 text-red-500" />
           </div>
           
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
             You've just taken the most important step towards transforming your health and confidence. 
-            Your BlueDrops package is being prepared and will be shipped to you soon.
+            Your EagleBoost package is being prepared and will be shipped to you soon.
           </p>
 
           {/* Order Details */}
@@ -69,7 +69,7 @@ const ThankYou = () => {
                 <div className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-0.5">3</div>
                 <div>
                   <p className="font-semibold text-green-800">Start Your Transformation</p>
-                  <p className="text-green-600 text-sm">Begin your BlueDrops journey and experience the results!</p>
+                  <p className="text-green-600 text-sm">Begin your EagleBoost journey and experience the results!</p>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const ThankYou = () => {
               <Star className="w-5 h-5 text-yellow-500 fill-current" />
             </div>
             <p className="text-green-700 text-sm">
-              We're so confident in BlueDrops that if you're not completely satisfied within 180 days, 
+              We're so confident in EagleBoost that if you're not completely satisfied within 180 days, 
               we'll refund every penny. No questions asked.
             </p>
           </div>
@@ -97,7 +97,7 @@ const ThankYou = () => {
           </p>
           <div className="space-y-2 text-sm">
             <p className="text-blue-600">
-              📧 Email: support@bluedrops.com
+              📧 Email: support@eagleboost.com
             </p>
             <p className="text-blue-600">
               📞 Phone: 1-800-BLUE-DROPS
@@ -111,7 +111,7 @@ const ThankYou = () => {
         {/* Social Proof */}
         <div className="mt-8 text-center">
           <p className="text-gray-500 text-sm mb-2">
-            Join over 50,000+ satisfied customers who have transformed their lives with BlueDrops
+            Join over 50,000+ satisfied customers who have transformed their lives with EagleBoost
           </p>
           <div className="flex items-center justify-center gap-1">
             {[...Array(5)].map((_, i) => (

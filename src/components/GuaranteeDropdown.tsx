@@ -9,31 +9,25 @@ const GuaranteeDropdown = () => {
   };
 
   return (
-    <section className="w-full max-w-sm mx-auto px-4 mt-8 mb-8">
-      <div 
-        className="bg-white rounded-2xl border-2 border-blue-200 shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl"
-        onClick={toggleDropdown}
-        style={{ zIndex: 50 }}
-      >
-        {/* Header - Always Visible */}
-        <div className="flex items-center justify-between p-6">
-          <div className="flex items-center gap-4">
+    <section className="max-w-xl mx-auto mt-6 mb-6 px-4">
+      <div className="bg-white rounded-xl border border-blue-200 shadow-lg overflow-hidden">
+        <div 
+          className="flex items-center justify-between px-6 py-3 cursor-pointer hover:bg-blue-50 transition-colors duration-200"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div className="flex items-center gap-3">
             {/* Guarantee Badge */}
             <div className="relative">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 via-orange-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                <div className="text-center">
-                  <div className="text-white text-xs font-bold leading-none">100%</div>
-                  <div className="bg-black text-white text-xs font-bold px-2 py-1 rounded-full mt-1">
-                    <div className="text-[10px] leading-none">60</div>
-                    <div className="text-[8px] leading-none">DAYS</div>
-                  </div>
-                </div>
-              </div>
+              <img 
+                className="w-12 h-12 rounded-full shadow-lg object-cover"
+                src="https://i.imgur.com/gPrJHSX.png" 
+                alt="Guarantee Badge"
+              />
             </div>
             
-            {/* Title */}
+            {/* Text Content */}
             <div>
-              <h3 className="text-xl font-bold text-orange-500 mb-1">
+              <h3 className="text-lg font-bold text-orange-500 mb-1">
                 60 Days Guarantee
               </h3>
               <p className="text-blue-600 text-sm font-medium">
@@ -73,12 +67,13 @@ const GuaranteeDropdown = () => {
               </p>
             </div>
             
-            {/* BlueDrops Logo */}
+            {/* Company Logo */}
             <div className="text-center">
-              <div className="inline-flex items-center gap-2">
-                <span className="text-blue-600 font-bold text-lg">EagleBoost</span>
-                <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-              </div>
+              <img 
+              src="https://i.imgur.com/DGvewLy.png" 
+              alt="Company Logo" 
+              className="h-16 mx-auto object-contain"
+            />
             </div>
           </div>
         </div>

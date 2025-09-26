@@ -66,11 +66,9 @@ const NewsCarousel = () => {
     <section className="w-full max-w-md mx-auto px-4 mt-6 mb-4">
       {/* Header */}
       <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-blue-900 mb-1">
-          As Seen In
-        </h2>
-        <h2 className="text-2xl font-bold text-blue-400 mb-3">
-          Major News Outlets
+        <h2 className="text-4xl font-black leading-tight mb-3">
+          <span className="text-blue-900">As Seen In </span>
+          <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Major News Outlets</span>
         </h2>
         <p className="text-blue-600 text-sm font-medium mb-2">
           Leading Health Publications Cover EagleBoost

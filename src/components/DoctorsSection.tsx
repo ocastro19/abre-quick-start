@@ -98,11 +98,9 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
     <section className="w-full max-w-md mx-auto px-4 mt-6 mb-6">
       {/* Header */}
       <div className="text-center mb-6">
-        <h2 className="text-xl sm:text-2xl font-bold text-blue-900 mb-1">
-          Clinically Reviewed.
-        </h2>
-        <h2 className="text-xl sm:text-2xl font-bold text-blue-400 mb-3">
-          Doctor Approved.
+        <h2 className="text-4xl font-black leading-tight mb-3">
+          <span className="text-blue-900">Clinically Reviewed. </span>
+          <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Doctor Approved.</span>
         </h2>
         <p className="text-blue-600 text-sm font-medium mb-2">
           What Doctors Say About EAGLE BOOST

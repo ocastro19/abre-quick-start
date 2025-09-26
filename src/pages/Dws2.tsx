@@ -12,7 +12,8 @@ const Dws2 = () => {
   }, []);
 
   const handleAccept = () => {
-    window.location.href = "https://pagamento.paybluedrops.com/checkout/downsell2:1";
+    // TODO: Replace with your checkout URL
+    // window.location.href = "your-checkout-url-here";
   };
 
   const handleDecline = () => {

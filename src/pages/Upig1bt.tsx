@@ -12,8 +12,8 @@ const Upig1bt = () => {
   }, []);
 
   const handleAccept = () => {
-    // Placeholder URL for IgniteMen 1-bottle
-    window.location.href = "https://pagamento.paybluedrops.com/checkout/ignite1:1";
+    // Redirect to 1-bottle purchase
+    window.location.href = "https://pay.geteagleboost.com/checkout/194464511:1";
   };
 
   const handleDecline = () => {

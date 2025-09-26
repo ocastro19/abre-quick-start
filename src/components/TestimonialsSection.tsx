@@ -75,11 +75,9 @@ const TestimonialsSection = () => {
     <section className="w-full max-w-md mx-auto px-4 mt-6 mb-6">
       {/* Header */}
       <div className="text-center mb-6">
-        <h2 className="text-xl sm:text-2xl font-bold text-blue-900 mb-1">
-          No Filters.
-        </h2>
-        <h2 className="text-xl sm:text-2xl font-bold text-blue-400 mb-3">
-          Just Real Results.
+        <h2 className="text-4xl font-black leading-tight mb-3">
+          <span className="text-blue-900">No Filters. </span>
+          <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Just Real Results.</span>
         </h2>
         <p className="text-blue-600 text-sm font-medium mb-2">
           What Our Customers Say About EAGLE BOOST

@@ -12,7 +12,8 @@ const Upig6bt = () => {
   }, []);
 
   const handleAccept = () => {
-    window.location.href = "https://pagamento.paybluedrops.com/checkout/ignite6:1";
+    // TODO: Replace with your checkout URL
+    // window.location.href = "your-checkout-url-here";
   };
 
   const handleDecline = () => {

@@ -10,20 +10,18 @@ interface VideoSectionProps {
 const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProps) => {
   return (
     <section className="w-full max-w-sm mx-auto px-4 pb-8">
-      {/* BlueDrops Logo */}
-      <div className="text-center mb-4">
-        <h1 className="text-blue-600 text-lg font-bold">EagleBoost</h1>
-      </div>
+
 
       {/* Red Banner */}
-      <div className="bg-red-500 text-white text-center py-2 px-4 rounded-lg mb-6">
-        <p className="text-sm font-bold">THEY DON'T WANT YOU TO KNOW THIS 🔻</p>
+      <div className="bg-red-500 text-white text-center py-1 px-3 rounded-md mb-6">
+        <p className="text-sm font-bold">THEY DON'T WANT YOU TO KNOW THIS 👇</p>
       </div>
 
       {/* Main Title */}
       <div className="text-center mb-6">
-        <h2 className="text-4xl font-bold text-blue-900 leading-tight">
-          Discover Celtic Salt Trick
+        <h2 className="text-4xl font-black leading-tight mb-6">
+          <span className="text-blue-900">Discover </span>
+          <span className="whitespace-nowrap bg-gradient-to-r from-blue-900 to-cyan-400 bg-clip-text text-transparent">Celtic Salt Trick</span>
         </h2>
       </div>
 

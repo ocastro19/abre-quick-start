@@ -21,6 +21,8 @@ const buttonVariants = cva(
         "cta-primary": "w-full font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl min-h-[70px] text-lg bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white",
         "cta-success": "w-full font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl min-h-[70px] text-lg bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white",
         "cta-warning": "w-full font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl min-h-[70px] text-lg bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black",
+        "cta-blue": "w-full font-bold rounded-3xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/25 min-h-[70px] text-lg bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white",
+        "cta-success": "w-full font-bold rounded-3xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-2xl shadow-green-400/50 min-h-[70px] text-lg bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white",
       },
       size: {
         default: "h-10 px-4 py-2",
