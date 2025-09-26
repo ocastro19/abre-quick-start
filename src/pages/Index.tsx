@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
+import DoctorsSection from "@/components/DoctorsSection";
 import ProductSection from "@/components/ProductSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import NoFiltersSection from "@/components/NoFiltersSection";
+import NewsOutletsSection from "@/components/NewsOutletsSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ScienceSection from "@/components/ScienceSection";
 import FinalCTASection from "@/components/FinalCTASection";
@@ -176,14 +179,26 @@ const Index = () => {
         {/* Content that shows after video or in admin mode */}
         {(showContent || isAdminMode || isBoltMode) && (
           <>
+            {/* Doctors Section */}
+            <DoctorsSection />
+
+            {/* Product Offers Section */}
             <ProductSection 
               showPurchaseButton={showPurchaseButton}
               onPurchase={handlePurchase}
               onSecondaryPackageClick={handleSecondaryPackageClick}
             />
 
-            <BenefitsSection />
+            {/* Testimonials Section with Fan Layout */}
+            <TestimonialsSection />
 
+            {/* No Filters Section */}
+            <NoFiltersSection />
+
+            {/* News Outlets Section */}
+            <NewsOutletsSection />
+
+            {/* Additional CTA Button */}
             <div className="mt-12 sm:mt-16 w-full max-w-lg mx-auto px-4 animate-fadeInUp animation-delay-1500">
               <div className="text-center">
                 <div className="relative">
@@ -228,54 +243,8 @@ const Index = () => {
               </div>
             </div>
 
+            <BenefitsSection />
             <ScienceSection />
-
-            <div className="mt-12 sm:mt-16 w-full max-w-lg mx-auto px-4 animate-fadeInUp animation-delay-1300">
-              <div className="text-center">
-                <div className="relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl sm:rounded-2xl blur-sm opacity-75 animate-pulse"></div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-green-300 to-emerald-400 rounded-xl sm:rounded-2xl blur-md opacity-50 animate-pulse animation-delay-500"></div>
-                  <button
-                    onClick={() => {
-                      const targetElement = document.getElementById("six-bottle-package") || 
-                                          document.querySelector('[data-purchase-section="true"]') || 
-                                          document.querySelector(".purchase-button-main");
-                      if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-                        (targetElement as HTMLElement).style.transition = "all 0.8s ease";
-                        (targetElement as HTMLElement).style.transform = "scale(1.02)";
-                        (targetElement as HTMLElement).style.boxShadow = "0 0 40px rgba(59, 130, 246, 0.4)";
-                        setTimeout(() => {
-                          (targetElement as HTMLElement).style.transform = "scale(1)";
-                          (targetElement as HTMLElement).style.boxShadow = "";
-                        }, 800);
-                      }
-                    }}
-                    className="relative w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 sm:py-5 px-6 sm:px-8 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-2xl text-base sm:text-lg border-2 border-white/40 backdrop-blur-sm animate-pulse"
-                    style={{ touchAction: "manipulation" }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-xl sm:rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="flex items-center justify-center gap-2 sm:gap-3">
-                      <span className="text-xl sm:text-2xl">🚀</span>
-                      <span className="leading-tight relative z-10">
-                        I'm ready to be the next success story!
-                      </span>
-                    </div>
-                  </button>
-                </div>
-                <div className="mt-4 space-y-1">
-                  <p className="text-green-600 text-sm sm:text-base font-bold animate-pulse">
-                    👆 Click here to secure your transformation
-                  </p>
-                  <p className="text-blue-600 text-xs sm:text-sm font-medium">
-                    Join 50,000+ men who chose BlueDrops for lasting results
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <TestimonialsSection />
-
             <FinalCTASection />
 
             <section 

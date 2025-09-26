@@ -1,5 +1,5 @@
-import { RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RefreshCcw } from "lucide-react";
 
 interface VideoSectionProps {
   isVideoLoaded: boolean;
@@ -9,79 +9,91 @@ interface VideoSectionProps {
 
 const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProps) => {
   return (
-    <div className="w-full max-w-md mx-auto mb-8">
-      {/* Video Container */}
-      <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
-        <div className="aspect-video relative">
-          {/* Video Player Container */}
-          <div 
-            id="vid_689e7c030f018d362b0e239d"
-            className="absolute inset-0 w-full h-full z-30 overflow-hidden"
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              zIndex: 30,
-              overflow: 'hidden',
-              isolation: 'isolate',
-              contain: 'layout style paint size'
-            }}
-            data-main-video="true"
-            data-video-id="689e7c030f018d362b0e239d"
-          >
-            {/* Video will be injected here by VTurb script */}
-            {!isVideoLoaded && !isVideoError && (
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="animate-spin h-8 w-8 border-2 border-white border-t-transparent rounded-full mx-auto mb-4"></div>
-                  <p className="text-sm font-medium">Loading video...</p>
-                </div>
-              </div>
-            )}
-            
-            {isVideoError && (
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900 to-red-700 flex items-center justify-center p-4">
-                <div className="text-center text-white">
-                  <div className="mb-4">
-                    <RefreshCw className="h-12 w-12 mx-auto mb-2 text-red-200" />
-                    <p className="text-sm font-medium mb-2">Video failed to load</p>
-                    <p className="text-xs text-red-200 mb-4">
-                      Please check your connection and try again
-                    </p>
-                  </div>
-                  <Button 
-                    onClick={onRetry}
-                    variant="outline"
-                    size="sm"
-                    className="bg-white/20 border-white/40 text-white hover:bg-white/30"
-                  >
-                    <RefreshCw className="h-4 w-4 mr-2" />
-                    Retry
-                  </Button>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-        
-        {/* Video Progress Bar Placeholder */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
-          <div className="h-full bg-blue-500 w-0 transition-all duration-300"></div>
-        </div>
-      </div>
-      
-      {/* Video Title */}
-      <div className="text-center mt-4">
-        <h1 className="text-xl sm:text-2xl font-bold text-blue-900 mb-2">
-          🎯 The Baking Soda Trick That's Changing Men's Lives
+    <section className="w-full max-w-md mx-auto px-4 mb-8">
+      {/* Header Title */}
+      <div className="text-center mb-6">
+        <h1 className="text-2xl sm:text-3xl font-black text-blue-900 leading-tight">
+          Baking Soda 
+          <span className="block text-red-600 font-extrabold">CURES</span>
+          <span className="block">Impotence</span>
         </h1>
-        <p className="text-blue-700 text-sm">
-          Watch this important presentation to discover the secret
+        <p className="text-sm text-blue-600 mt-2 font-medium">
+          Doctor-approved natural solution
         </p>
       </div>
-    </div>
+
+      {/* Video Container */}
+      <div className="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-xl">
+        {/* Loading State */}
+        {!isVideoLoaded && !isVideoError && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+              <p className="text-blue-700 font-medium">Loading video...</p>
+            </div>
+          </div>
+        )}
+
+        {/* Error State */}
+        {isVideoError && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100">
+            <div className="text-center p-6">
+              <div className="text-red-600 text-4xl mb-4">⚠️</div>
+              <p className="text-red-700 font-medium mb-4">
+                Video temporarily unavailable
+              </p>
+              <Button 
+                onClick={onRetry}
+                className="bg-red-600 hover:bg-red-700 text-white"
+              >
+                <RefreshCcw className="w-4 h-4 mr-2" />
+                Retry
+              </Button>
+            </div>
+          </div>
+        )}
+
+        {/* Video Embed Container */}
+        <div 
+          id="vid_689e7c030f018d362b0e239d" 
+          className="w-full h-full"
+          style={{ 
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            background: "#000"
+          }}
+        >
+          {/* Placeholder content if video doesn't load */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-white text-center">
+              <div className="text-6xl mb-4">🎬</div>
+              <p className="text-lg font-semibold">
+                Watch the breakthrough discovery
+              </p>
+              <p className="text-sm text-gray-300 mt-2">
+                How baking soda transforms men's health
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Video Progress Bar */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700">
+          <div className="h-full bg-red-600 w-0 transition-all duration-100" style={{ width: "0%" }}></div>
+        </div>
+      </div>
+
+      {/* Video Description */}
+      <div className="text-center mt-4">
+        <p className="text-blue-700 text-sm font-medium">
+          📺 Watch this important health revelation
+        </p>
+        <p className="text-xs text-gray-600 mt-1">
+          This video may be removed at any time
+        </p>
+      </div>
+    </section>
   );
 };
 
