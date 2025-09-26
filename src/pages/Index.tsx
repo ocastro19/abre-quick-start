@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
 import DoctorsSection from "@/components/DoctorsSection";
 import DoctorTrustCTA from "@/components/DoctorTrustCTA";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import ReadySuccessCTA from "@/components/ReadySuccessCTA";
 import ProductSection from "@/components/ProductSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NoFiltersSection from "@/components/NoFiltersSection";
@@ -185,6 +187,12 @@ const Index = () => {
 
             {/* Doctor Trust CTA - Logo após os médicos */}
             <DoctorTrustCTA />
+
+            {/* Testimonials Carousel - "No Filters. Just Real Results." */}
+            <TestimonialsCarousel />
+
+            {/* Ready Success CTA - Logo após testemunhos */}
+            <ReadySuccessCTA />
 
             {/* Product Offers Section - DEPOIS dos médicos */}
             <ProductSection 
