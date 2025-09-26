@@ -19,7 +19,7 @@ const Index = () => {
   const [selectedPackage, setSelectedPackage] = useState("");
   const [showPurchaseButton, setShowPurchaseButton] = useState(false);
 
-  // Check for admin/dev mode
+  // Check for admin/dev mode - including Lovable environment
   const [isAdminMode] = useState(() => {
     const hostname = window.location.hostname;
     return hostname.includes("stackblitz") || 
@@ -29,12 +29,16 @@ const Index = () => {
            hostname.includes("127.0.0.1") || 
            hostname.includes("preview") || 
            hostname.includes("netlify.app") ||
+           hostname.includes("lovableproject.com") ||  // Add Lovable environment
+           hostname.includes("lovable.app") ||
            window.location.search.includes("admin=true");
   });
 
   const [isBoltMode] = useState(() => {
     const hostname = window.location.hostname;
-    return hostname.includes("bolt.new") || hostname.includes("webcontainer");
+    return hostname.includes("bolt.new") || 
+           hostname.includes("webcontainer") ||
+           hostname.includes("lovableproject.com"); // Add Lovable environment
   });
 
   useEffect(() => {
@@ -90,15 +94,15 @@ const Index = () => {
   }, [isVideoLoaded, retryCount]);
 
   useEffect(() => {
-    // Show content after video loads or in admin mode
-    if (isVideoLoaded || isAdminMode || isBoltMode) {
+    // Show content after video loads, timeout, or in admin mode
+    if (isVideoLoaded || isVideoError || isAdminMode || isBoltMode) {
       const timer = setTimeout(() => {
         setShowContent(true);
         setShowPurchaseButton(true);
-      }, 2000);
+      }, 1000); // Reduced delay for better UX
       return () => clearTimeout(timer);
     }
-  }, [isVideoLoaded, isAdminMode, isBoltMode]);
+  }, [isVideoLoaded, isVideoError, isAdminMode, isBoltMode]);
 
   const handleVideoRetry = () => {
     setRetryCount(prev => prev + 1);
@@ -146,7 +150,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 via-white to-gray-50 overflow-x-hidden">
-      <LoadingOverlay />
+      {/* Show loading only when not in admin mode and content is not ready */}
+      <LoadingOverlay show={!isAdminMode && !isBoltMode && !showContent && !isVideoError} />
       
       {/* Admin/Dev Mode Indicator */}
       {(isAdminMode || isBoltMode) && (

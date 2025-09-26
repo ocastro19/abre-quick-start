@@ -1,4 +1,10 @@
-const LoadingOverlay = () => {
+interface LoadingOverlayProps {
+  show?: boolean;
+}
+
+const LoadingOverlay = ({ show = false }: LoadingOverlayProps) => {
+  if (!show) return null;
+  
   return (
     <div className="fixed inset-0 bg-gradient-to-br from-blue-50 to-white z-50 flex items-center justify-center">
       <div className="text-center">
