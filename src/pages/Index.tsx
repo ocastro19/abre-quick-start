@@ -210,16 +210,6 @@ const Index = () => {
             {/* Guarantee Dropdown */}
             <GuaranteeDropdown />
 
-            {/* Footer */}
-            <Footer />
-
-            {/* Product Offers Section - DEPOIS dos médicos */}
-            <ProductSection 
-              showPurchaseButton={showPurchaseButton}
-              onPurchase={handlePurchase}
-              onSecondaryPackageClick={handleSecondaryPackageClick}
-            />
-
             {/* Testimonials Section with Fan Layout */}
             <TestimonialsSection />
 
@@ -229,95 +219,19 @@ const Index = () => {
             {/* News Outlets Section */}
             <NewsOutletsSection />
 
-            {/* Additional CTA Button */}
-            <div className="mt-12 sm:mt-16 w-full max-w-lg mx-auto px-4 animate-fadeInUp animation-delay-1500">
-              <div className="text-center">
-                <div className="relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl sm:rounded-2xl blur-sm opacity-75 animate-pulse animation-delay-300"></div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-blue-300 to-indigo-400 rounded-xl sm:rounded-2xl blur-md opacity-50 animate-pulse animation-delay-800"></div>
-                  <button
-                    onClick={() => {
-                      const targetElement = document.getElementById("six-bottle-package") || 
-                                          document.querySelector('[data-purchase-section="true"]') || 
-                                          document.querySelector(".purchase-button-main");
-                      if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-                        (targetElement as HTMLElement).style.transition = "all 0.8s ease";
-                        (targetElement as HTMLElement).style.transform = "scale(1.02)";
-                        (targetElement as HTMLElement).style.boxShadow = "0 0 40px rgba(16, 185, 129, 0.4)";
-                        setTimeout(() => {
-                          (targetElement as HTMLElement).style.transform = "scale(1)";
-                          (targetElement as HTMLElement).style.boxShadow = "";
-                        }, 800);
-                      }
-                    }}
-                    className="relative w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold py-4 sm:py-5 px-6 sm:px-8 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-2xl text-base sm:text-lg border-2 border-white/40 backdrop-blur-sm animate-pulse"
-                    style={{ touchAction: "manipulation" }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-xl sm:rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="flex items-center justify-center gap-2 sm:gap-3">
-                      <span className="text-xl sm:text-2xl">👨‍⚕️</span>
-                      <span className="leading-tight text-center relative z-10">
-                        If doctors trust it, I trust it too — start my treatment now
-                      </span>
-                    </div>
-                  </button>
-                </div>
-                <div className="mt-4 space-y-1">
-                  <p className="text-blue-600 text-sm sm:text-base font-bold animate-pulse">
-                    👆 Tap to start your doctor-approved treatment
-                  </p>
-                  <p className="text-indigo-600 text-xs sm:text-sm font-medium">
-                    Clinically reviewed • MD verified • 180-day guarantee
-                  </p>
-                </div>
-              </div>
-            </div>
-
             <BenefitsSection />
             <ScienceSection />
             <FinalCTASection />
 
-            <section 
-              id="final-purchase-section" 
-              data-purchase-section="true"
-              className="mt-16 sm:mt-20 w-full max-w-5xl mx-auto px-4 animate-fadeInUp animation-delay-2200"
-            >
-              <div className="text-center mb-8 sm:mb-12">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-blue-900 mb-4">
-                  <span className="block">Ready to Transform</span>
-                  <span className="bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 bg-clip-text text-transparent block">
-                    Your Life?
-                  </span>
-                </h2>
-                <p className="text-lg sm:text-xl text-blue-700 font-semibold mb-2">
-                  Choose your BlueDrops package below
-                </p>
-                <p className="text-sm sm:text-base text-blue-600">
-                  Don't miss this opportunity to transform your health and confidence
-                </p>
-              </div>
-              <div className="flex justify-center">
-                <div className="w-full max-w-md">
-                  <ProductSection 
-                    showPurchaseButton={true}
-                    onPurchase={handlePurchase}
-                    onSecondaryPackageClick={handleSecondaryPackageClick}
-                  />
-                </div>
-              </div>
-              <div className="text-center mt-8 sm:mt-12">
-                <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-blue-200 shadow-lg max-w-2xl mx-auto">
-                  <h3 className="text-xl sm:text-2xl font-bold text-blue-900 mb-3">
-                    🚀 Your Transformation Starts Today
-                  </h3>
-                  <p className="text-blue-700 text-sm sm:text-base leading-relaxed">
-                    Join thousands of men who have already discovered the power of BlueDrops. 
-                    With our 180-day guarantee, you have nothing to lose and everything to gain.
-                  </p>
-                </div>
-              </div>
-            </section>
+            {/* Final Product Offers Section - ANTES DO FOOTER */}
+            <ProductSection 
+              showPurchaseButton={showPurchaseButton}
+              onPurchase={handlePurchase}
+              onSecondaryPackageClick={handleSecondaryPackageClick}
+            />
+
+            {/* Footer */}
+            <Footer />
           </>
         )}
       </div>
