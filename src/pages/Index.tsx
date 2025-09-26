@@ -179,10 +179,10 @@ const Index = () => {
         {/* Content that shows after video or in admin mode */}
         {(showContent || isAdminMode || isBoltMode) && (
           <>
-            {/* Doctors Section */}
+            {/* Doctors Section - ANTES das ofertas */}
             <DoctorsSection />
 
-            {/* Product Offers Section */}
+            {/* Product Offers Section - DEPOIS dos médicos */}
             <ProductSection 
               showPurchaseButton={showPurchaseButton}
               onPurchase={handlePurchase}
