@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import VideoSection from "@/components/VideoSection";
 import DoctorsSection from "@/components/DoctorsSection";
+import DoctorTrustCTA from "@/components/DoctorTrustCTA";
 import ProductSection from "@/components/ProductSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NoFiltersSection from "@/components/NoFiltersSection";
@@ -181,6 +182,9 @@ const Index = () => {
           <>
             {/* Doctors Section - ANTES das ofertas */}
             <DoctorsSection />
+
+            {/* Doctor Trust CTA - Logo após os médicos */}
+            <DoctorTrustCTA />
 
             {/* Product Offers Section - DEPOIS dos médicos */}
             <ProductSection 
