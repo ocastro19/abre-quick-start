@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import cnnLogo from "@/assets/cnn-logo.png";
-import webmdLogo from "@/assets/webmd-logo.png";
-import mayoClinicLogo from "@/assets/mayo-clinic-logo.png";
 
 const NewsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,21 +7,21 @@ const NewsCarousel = () => {
   const newsArticles = [
     {
       outlet: "CNN Health",
-      logo: cnnLogo,
+      logo: "/images/cnn-logo.png",
       title: "A Surprising Natural Solution to Men's Performance Issues",
       preview: "CNN reveals the growing demand for natural solutions among men over 40. Products like EagleBoost are gaining ground as alternatives to traditional treatments.",
       ctaText: "Read Full Article"
     },
     {
       outlet: "WebMD",
-      logo: webmdLogo,
+      logo: "/images/webmd-logo.png",
       title: "Natural Male Enhancers Gaining Ground in 2025",
       preview: "WebMD highlights studies on the use of simple ingredients to improve male sexual health and performance naturally.",
       ctaText: "Read Full Article"
     },
     {
       outlet: "Mayo Clinic",
-      logo: mayoClinicLogo,
+      logo: "/images/mayo-clinic-logo.png",
       title: "The Science Behind Herbal Support for Men's Vitality",
       preview: "Mayo Clinic explores the benefits and limitations of natural approaches, suggesting products like EagleBoost may complement traditional treatment.",
       ctaText: "Read Full Article"
