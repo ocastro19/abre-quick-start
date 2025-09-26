@@ -1,5 +1,6 @@
 import { useState } from "react";
 import drMehmetOzImage from "@/assets/dr-mehmet-oz.jpg";
+import johnSinnerImage from "@/assets/john-sinner.jpg";
 
 const DoctorsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,6 +26,15 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
 </iframe>
 </div>
 </div>`
+    },
+    {
+      name: "John Sinner",
+      title: "Adult Film Actor",
+      hospital: "",
+      image: johnSinnerImage,
+      quote: "For me, real performance goes beyond the screen. Eagle Boost has been my secret weapon — helping me overcome ED and stay confident when it matters most.",
+      verified: true,
+      videoIframe: `<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_68c44af41b231e3484f1d266_wrapper" style="margin: 0 auto; width: 100%; "> <div style="position: relative; padding: 56.41025641025641% 0 0 0;" id="ifr_68c44af41b231e3484f1d266_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68c44af41b231e3484f1d266" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68c44af41b231e3484f1d266/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>`
     }
   ];
 
@@ -116,12 +126,12 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
                   <div className="flex-1">
                     <h3 className="font-bold text-blue-900 text-xl mb-1">{doctor.name}</h3>
                     <p className="text-blue-600 text-sm mb-1">{doctor.title}</p>
-                    <p className="text-blue-500 text-sm mb-3">{doctor.hospital}</p>
+                    <p className="text-blue-500 text-sm mb-3">{doctor.hospital && doctor.hospital}</p>
                     
                     {doctor.verified && (
                       <div>
                         <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                          ✓ MD VERIFIED
+                          ✓ VERIFIED
                         </span>
                       </div>
                     )}
@@ -148,11 +158,21 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
         })}
       </div>
 
-      {/* Navigation Dots - Simplificado pois só temos 1 doutor */}
+      {/* Navigation Dots */}
       <div className="flex justify-center gap-3 mb-6">
-        <div className="w-8 h-8 rounded-full font-bold text-sm bg-blue-600 text-white shadow-lg flex items-center justify-center">
-          1
-        </div>
+        {doctors.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-8 h-8 rounded-full font-bold text-sm transition-all duration-300 ${
+              index === currentIndex
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
+            }`}
+          >
+            {index + 1}
+          </button>
+        ))}
       </div>
 
       {/* Medical Advisory Board Badge */}
