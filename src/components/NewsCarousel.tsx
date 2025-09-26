@@ -105,20 +105,19 @@ const NewsCarousel = () => {
             >
               <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-6 h-full max-h-96">
                 {/* News Outlet Header */}
-                <div className="text-center mb-4">
-                  <div className="flex items-center justify-center gap-3 mb-3">
+                <div className="text-center mb-6">
+                  <div className="flex items-center justify-center gap-2 mb-4">
                     <img 
                       src={article.logo} 
                       alt={`${article.outlet} logo`} 
-                      className="w-12 h-12 object-contain"
+                      className="h-8 object-contain"
                     />
-                    <h3 className="font-bold text-blue-900 text-lg">{article.outlet}</h3>
                   </div>
                 </div>
                 
                 {/* Article Title */}
                 <div className="mb-4">
-                  <h4 className="text-blue-900 text-base font-bold leading-tight text-center mb-3">
+                  <h4 className="text-blue-900 text-lg font-bold leading-tight text-left mb-4">
                     {article.title}
                   </h4>
                 </div>
