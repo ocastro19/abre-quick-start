@@ -173,12 +173,8 @@ const Index = () => {
         {/* Content that shows after video or in admin mode */}
         {(showContent || isAdminMode || isBoltMode) && (
           <>
-            {/* 1. VSL - Video Sales Letter com Baking Soda Hero */}
-            <HeroSection 
-              isVideoLoaded={isVideoLoaded}
-              isVideoError={isVideoError}
-              onRetry={handleVideoRetry}
-            />
+            {/* 1. Baking Soda Hero */}
+            <HeroSection />
 
             {/* 2. Oferta Principal */}
             <ProductSection 
