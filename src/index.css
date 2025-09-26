@@ -2,127 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Eagle Institutional Design System - Brazilian Professional Theme
-All colors MUST be HSL.
-*/
-
+/* ===== BlueDrops Design System - Health Supplement Theme ===== */
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 210 25% 15%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 210 25% 15%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 25% 15%;
-
-    /* Brazilian institutional blue - deep and professional */
-    --primary: 214 85% 25%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 214 85% 35%;
-
-    /* Golden accent for Brazilian elegance */
-    --gold: 45 90% 55%;
-    --gold-foreground: 210 25% 15%;
-
-    --secondary: 210 15% 95%;
-    --secondary-foreground: 210 25% 15%;
-
-    --muted: 210 15% 96%;
-    --muted-foreground: 210 10% 55%;
-
-    --accent: 214 25% 92%;
-    --accent-foreground: 210 25% 15%;
-
-    --destructive: 0 85% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 214 15% 88%;
-    --input: 214 15% 95%;
-    --ring: 214 85% 25%;
-
-    /* Gradients for hero sections */
-    --gradient-primary: linear-gradient(135deg, hsl(214 85% 25%), hsl(214 75% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(214 85% 25%) 0%, hsl(214 75% 35%) 50%, hsl(45 90% 55%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
-
-    /* Shadows with Brazilian blue tint */
-    --shadow-elegant: 0 10px 30px -10px hsl(214 85% 25% / 0.15);
-    --shadow-hero: 0 20px 40px -10px hsl(214 85% 25% / 0.25);
-    --shadow-card: 0 4px 20px hsl(214 85% 25% / 0.08);
-
-    /* Animations */
+    /* ===== Core Colors ===== */
+    --background: 210 20% 98%;           /* Light gray-blue background */
+    --foreground: 210 20% 6%;            /* Dark blue-gray text */
+    --card: 0 0% 100%;                   /* Pure white cards */
+    --card-foreground: 210 20% 6%;       /* Dark blue-gray card text */
+    --popover: 0 0% 100%;                /* White popover background */
+    --popover-foreground: 210 20% 6%;    /* Dark text on popover */
+    
+    /* ===== Primary Colors (Blue) ===== */
+    --primary: 217 91% 60%;              /* Deep blue #3B82F6 */
+    --primary-foreground: 0 0% 100%;     /* White text on primary */
+    --primary-hover: 217 91% 50%;        /* Darker blue hover */
+    
+    /* ===== Secondary Colors (Green) ===== */
+    --secondary: 142 76% 36%;            /* Emerald green #059669 */
+    --secondary-foreground: 0 0% 100%;   /* White text on secondary */
+    --secondary-hover: 142 76% 30%;      /* Darker green hover */
+    
+    /* ===== Accent Colors ===== */
+    --accent: 212 100% 97%;              /* Very light blue accent */
+    --accent-foreground: 217 91% 60%;    /* Blue text on accent */
+    
+    /* ===== Status Colors ===== */
+    --destructive: 0 84% 60%;            /* Red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* White text on destructive */
+    --success: 142 76% 36%;              /* Green for success */
+    --success-foreground: 0 0% 100%;     /* White text on success */
+    --warning: 45 93% 47%;               /* Orange for warnings */
+    --warning-foreground: 0 0% 100%;     /* White text on warnings */
+    
+    /* ===== Neutral Colors ===== */
+    --muted: 210 40% 98%;                /* Very light blue-gray muted */
+    --muted-foreground: 215 16% 47%;     /* Gray text on muted */
+    --border: 214 32% 91%;               /* Light border color */
+    --input: 214 32% 91%;                /* Input border color */
+    --ring: 217 91% 60%;                 /* Focus ring color (blue) */
+    
+    /* ===== Gradients ===== */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 30%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(210 40% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 98%) 100%);
+    
+    /* ===== Shadows ===== */
+    --shadow-sm: 0 1px 2px 0 hsl(210 20% 20% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 20% 20% / 0.1), 0 2px 4px -1px hsl(210 20% 20% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(210 20% 20% / 0.1), 0 4px 6px -2px hsl(210 20% 20% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(210 20% 20% / 0.1), 0 10px 10px -5px hsl(210 20% 20% / 0.04);
+    --shadow-blue: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
+    --shadow-green: 0 10px 30px -10px hsl(142 76% 36% / 0.3);
+    
+    /* ===== Animations ===== */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-elegant: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 0.5s;
+    
+    /* ===== Radius ===== */
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 210 25% 8%;
-    --foreground: 210 15% 92%;
-
-    --card: 210 20% 12%;
-    --card-foreground: 210 15% 92%;
-
-    --popover: 210 20% 12%;
-    --popover-foreground: 210 15% 92%;
-
-    --primary: 214 85% 45%;
-    --primary-foreground: 210 25% 8%;
-    --primary-light: 214 85% 55%;
-
-    --gold: 45 85% 65%;
-    --gold-foreground: 210 25% 8%;
-
-    --secondary: 210 15% 15%;
-    --secondary-foreground: 210 15% 92%;
-
-    --muted: 210 15% 15%;
-    --muted-foreground: 210 10% 65%;
-
-    --accent: 210 15% 18%;
-    --accent-foreground: 210 15% 92%;
-
-    --destructive: 0 85% 65%;
-    --destructive-foreground: 210 25% 8%;
-
-    --border: 210 15% 20%;
-    --input: 210 15% 15%;
-    --ring: 214 85% 45%;
-
-    --gradient-primary: linear-gradient(135deg, hsl(214 85% 35%), hsl(214 75% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(214 85% 35%) 0%, hsl(214 75% 45%) 50%, hsl(45 85% 65%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(210 20% 12%) 0%, hsl(210 15% 15%) 100%);
-
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-    --shadow-hero: 0 20px 40px -10px hsl(0 0% 0% / 0.4);
-    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.2);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode is not used in BlueDrops but keeping for compatibility */
+    --background: 210 20% 6%;
+    --foreground: 210 20% 98%;
+    --card: 210 20% 8%;
+    --card-foreground: 210 20% 98%;
+    --popover: 210 20% 8%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 20% 12%;
+    --muted-foreground: 215 16% 65%;
+    --accent: 210 20% 12%;
+    --accent-foreground: 217 91% 60%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 18%;
+    --input: 210 20% 18%;
+    --ring: 217 91% 60%;
   }
 }
 
@@ -130,8 +93,80 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* ===== Custom Scrollbar ===== */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer utilities {
+  /* ===== Animation Delays ===== */
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
+  .animation-delay-1300 { animation-delay: 1300ms; }
+  .animation-delay-1500 { animation-delay: 1500ms; }
+  .animation-delay-2000 { animation-delay: 2000ms; }
+  .animation-delay-2200 { animation-delay: 2200ms; }
+  
+  /* ===== Custom Gradients ===== */
+  .bg-gradient-primary { background: var(--gradient-primary); }
+  .bg-gradient-secondary { background: var(--gradient-secondary); }
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-card { background: var(--gradient-card); }
+  
+  /* ===== Custom Shadows ===== */
+  .shadow-blue { box-shadow: var(--shadow-blue); }
+  .shadow-green { box-shadow: var(--shadow-green); }
+  
+  /* ===== Fade In Animation ===== */
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ===== Button Touch Optimizations ===== */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  /* ===== Backdrop Blur Support ===== */
+  .backdrop-blur-support {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  .no-print {
+    display: none !important;
   }
 }
