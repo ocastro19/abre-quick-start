@@ -23,15 +23,15 @@ const DoctorTrustCTA = () => {
       <div className="text-center">
         {/* Main CTA Button */}
         <div className="relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-sm opacity-75 animate-pulse"></div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl blur-sm opacity-75 animate-pulse"></div>
           <Button
             onClick={handleClick}
-            className="relative w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl text-base"
+            className="relative w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-8 rounded-3xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-2xl text-lg min-h-[80px]"
             style={{ touchAction: "manipulation" }}
           >
-            <div className="flex items-center justify-center gap-3">
-              <span className="text-xl">👨‍⚕️</span>
-              <span className="leading-tight text-center">
+            <div className="flex items-center justify-center gap-4">
+              <span className="text-3xl">👨‍⚕️</span>
+              <span className="leading-tight text-center font-extrabold text-xl">
                 If doctors trust it, I trust it too — start my treatment now
               </span>
             </div>
@@ -39,11 +39,11 @@ const DoctorTrustCTA = () => {
         </div>
         
         {/* Supporting Text */}
-        <div className="mt-4 space-y-2">
-          <p className="text-blue-600 text-sm font-bold">
+        <div className="mt-6 space-y-3">
+          <p className="text-blue-600 text-base font-bold">
             👋 Tap to start your doctor-approved treatment
           </p>
-          <p className="text-blue-500 text-xs">
+          <p className="text-blue-500 text-sm">
             Clinically reviewed • MD verified • 180-day guarantee
           </p>
         </div>

@@ -131,19 +131,25 @@ const NewsCarousel = () => {
 
                 {/* CTA Button */}
                 <div className="text-center">
-                  <Button
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all duration-300"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      // Navigate to article or scroll to purchase section
-                      const targetElement = document.getElementById("six-bottle-package");
-                      if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
-                      }
-                    }}
-                  >
-                    {article.ctaText}
-                  </Button>
+                  <div className="relative inline-block w-full">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-sm opacity-50"></div>
+                    <Button
+                      className="relative w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 text-base min-h-[60px] shadow-xl"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        // Navigate to article or scroll to purchase section
+                        const targetElement = document.getElementById("six-bottle-package");
+                        if (targetElement) {
+                          targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+                        }
+                      }}
+                    >
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-lg">📖</span>
+                        <span>{article.ctaText}</span>
+                      </div>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
