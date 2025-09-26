@@ -98,10 +98,10 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
     <section className="w-full max-w-md mx-auto px-4 mt-12 mb-8">
       {/* Header */}
       <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-blue-900 mb-1">
+        <h2 className="text-xl sm:text-2xl font-bold text-blue-900 mb-1">
           Clinically Reviewed.
         </h2>
-        <h2 className="text-2xl font-bold text-blue-400 mb-3">
+        <h2 className="text-xl sm:text-2xl font-bold text-blue-400 mb-3">
           Doctor Approved.
         </h2>
         <p className="text-blue-600 text-sm font-medium mb-2">
@@ -110,96 +110,98 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
       </div>
 
       {/* Carousel Container */}
-      <div 
-        className="relative w-full max-w-sm mx-auto overflow-visible mb-6"
-        style={{
-          height: 'auto',
-          minHeight: '500px',
-          padding: '0 32px',
-          maxWidth: 'min(400px, 100vw)'
-        }}
-      >
-        {doctors.map((doctor, index) => {
-          const position = getCardPosition(index);
-          
-          return (
-            <div
-              key={index}
-              className="absolute inset-0 mx-2 transition-all duration-700 ease-in-out cursor-pointer h-fit"
-              style={{
-                ...position,
-                maxWidth: 'calc(100% - 16px)',
-                boxSizing: 'border-box'
-              }}
-              onClick={() => setCurrentIndex(index)}
-            >
-              <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-4 sm:p-6 w-full">
-                {/* Doctor Info Row - Photo left, Info right */}
-                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  {/* Doctor Photo */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-blue-200 flex-shrink-0">
-                    <img 
-                      src={doctor.image} 
-                      alt={doctor.name}
-                      className="w-full h-full object-cover"
-                    />
+      <div className="relative w-full max-w-sm mx-auto mb-8">
+        {/* Cards Container */}
+        <div 
+          className="relative overflow-visible"
+          style={{
+            height: 'auto',
+            minHeight: '400px',
+            padding: '0 16px'
+          }}
+        >
+          {doctors.map((doctor, index) => {
+            const position = getCardPosition(index);
+            
+            return (
+              <div
+                key={index}
+                className="absolute top-0 left-4 right-4 transition-all duration-700 ease-in-out cursor-pointer"
+                style={{
+                  ...position,
+                  width: 'calc(100% - 32px)',
+                  maxWidth: '400px'
+                }}
+                onClick={() => setCurrentIndex(index)}
+              >
+                <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-4 sm:p-6 w-full">
+                  {/* Doctor Info Row - Photo left, Info right */}
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    {/* Doctor Photo */}
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-blue-200 flex-shrink-0">
+                      <img 
+                        src={doctor.image} 
+                        alt={doctor.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    
+                    {/* Doctor Info */}
+                    <div className="flex-1">
+                      <h3 className="font-bold text-blue-900 text-lg sm:text-xl mb-1">{doctor.name}</h3>
+                      <p className="text-blue-600 text-xs sm:text-sm mb-1">{doctor.title}</p>
+                      <p className="text-blue-500 text-xs sm:text-sm mb-2 sm:mb-3">{doctor.hospital && doctor.hospital}</p>
+                      
+                      {doctor.verified && (
+                        <div>
+                          <span className="bg-green-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-bold">
+                            ✓ VERIFIED
+                          </span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                   
-                  {/* Doctor Info */}
-                  <div className="flex-1">
-                    <h3 className="font-bold text-blue-900 text-lg sm:text-xl mb-1">{doctor.name}</h3>
-                    <p className="text-blue-600 text-xs sm:text-sm mb-1">{doctor.title}</p>
-                    <p className="text-blue-500 text-xs sm:text-sm mb-2 sm:mb-3">{doctor.hospital && doctor.hospital}</p>
-                    
-                    {doctor.verified && (
-                      <div>
-                        <span className="bg-green-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-bold">
-                          ✓ VERIFIED
-                        </span>
-                      </div>
-                    )}
+                  {/* Quote Section */}
+                  <div className="bg-blue-50 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
+                    <p className="text-blue-800 text-sm sm:text-base font-medium italic leading-relaxed">
+                      "{doctor.quote}"
+                    </p>
                   </div>
-                </div>
-                
-                {/* Quote Section */}
-                <div className="bg-blue-50 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
-                  <p className="text-blue-800 text-sm sm:text-base font-medium italic leading-relaxed">
-                    "{doctor.quote}"
-                  </p>
-                </div>
 
-                {/* Video iframe */}
-                {doctor.videoIframe && (
-                  <div 
-                    className="w-full rounded-lg overflow-hidden"
-                    dangerouslySetInnerHTML={{__html: doctor.videoIframe}}
-                  />
-                )}
+                  {/* Video iframe */}
+                  {doctor.videoIframe && (
+                    <div 
+                      className="w-full rounded-lg overflow-hidden"
+                      dangerouslySetInnerHTML={{__html: doctor.videoIframe}}
+                    />
+                  )}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      {/* Navigation Dots */}
-      <div className="flex justify-center gap-3 mb-6">
-        {doctors.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-8 h-8 rounded-full font-bold text-sm transition-all duration-300 ${
-              index === currentIndex
-                ? 'bg-blue-600 text-white shadow-lg'
-                : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
-            }`}
-          >
-            {index + 1}
-          </button>
-        ))}
+        {/* Navigation Dots - Posicionamento fixo */}
+        <div className="flex justify-center gap-3 mt-6">
+          {doctors.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full font-bold text-sm sm:text-base transition-all duration-300 ${
+                index === currentIndex
+                  ? 'bg-blue-600 text-white shadow-lg scale-110'
+                  : 'bg-blue-100 text-blue-600 hover:bg-blue-200 hover:scale-105'
+              }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Medical Advisory Board Badge */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4 text-center">
         <div className="text-blue-600 text-sm font-bold mb-1">
           🏥 Medical Advisory Board
         </div>
