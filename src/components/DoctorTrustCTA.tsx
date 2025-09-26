@@ -19,7 +19,7 @@ const DoctorTrustCTA = () => {
   };
 
   return (
-    <section className="w-full max-w-sm mx-auto px-4 mt-8 mb-8">
+    <section className="w-full max-w-sm mx-auto px-4 mt-4 mb-4">
       <div className="text-center">
         {/* Main CTA Button */}
         <div className="relative">

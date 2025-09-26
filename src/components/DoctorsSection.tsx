@@ -95,7 +95,7 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
   };
 
   return (
-    <section className="w-full max-w-md mx-auto px-4 mt-12 mb-8">
+    <section className="w-full max-w-md mx-auto px-4 mt-6 mb-6">
       {/* Header */}
       <div className="text-center mb-6">
         <h2 className="text-xl sm:text-2xl font-bold text-blue-900 mb-1">
