@@ -12,6 +12,7 @@ import GuaranteeDropdown from "@/components/GuaranteeDropdown";
 import TransformationSection from "@/components/TransformationSection";
 import Footer from "@/components/Footer";
 import FAQSection from "@/components/FAQSection";
+import TransformationCTA from "@/components/TransformationCTA";
 import UpsellModal from "@/components/UpsellModal";
 import LoadingOverlay from "@/components/LoadingOverlay";
 const Index = () => {
@@ -165,6 +166,9 @@ const Index = () => {
 
             {/* 9. Transformação - Ready to Transform Your Life? */}
             <TransformationSection showPurchaseButton={showPurchaseButton} onPurchase={handlePurchase} onSecondaryPackageClick={handleSecondaryPackageClick} />
+
+            {/* 10. Transformation CTA */}
+            <TransformationCTA />
 
             {/* 11. FAQ */}
             <FAQSection />
