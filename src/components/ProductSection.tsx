@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Check, Star } from "lucide-react";
 
 interface ProductSectionProps {
   showPurchaseButton: boolean;
@@ -9,44 +8,6 @@ interface ProductSectionProps {
 }
 
 const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClick }: ProductSectionProps) => {
-  const [selectedPackage, setSelectedPackage] = useState("6-bottle");
-
-  const mainPackage = {
-    id: "6-bottle",
-    name: "6 Bottles",
-    subtitle: "6 Month Supply - BEST VALUE",
-    price: "$49",
-    originalPrice: "$99",
-    totalPrice: "$294",
-    totalOriginalPrice: "$594",
-    savings: "Save $300",
-    description: "Maximum transformation package",
-    bottles: 6
-  };
-
-  const secondaryPackages = [
-    {
-      id: "3-bottle",
-      name: "3 Bottles", 
-      subtitle: "3 Month Supply",
-      price: "$59",
-      originalPrice: "$99",
-      totalPrice: "$177",
-      totalOriginalPrice: "$297",
-      savings: "Save $120",
-      bottles: 3
-    },
-    {
-      id: "1-bottle",
-      name: "1 Bottle",
-      subtitle: "1 Month Supply", 
-      price: "$69",
-      originalPrice: "$99",
-      savings: "Save $30",
-      bottles: 1
-    }
-  ];
-
   const handlePurchaseClick = (packageId: string) => {
     if (packageId === "6-bottle") {
       onPurchase(packageId);
@@ -60,181 +21,161 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 mt-8">
-      <div className="text-center mb-6">
-        <h2 className="text-2xl sm:text-3xl font-black text-blue-900 mb-2">
-          🎯 Choose Your BlueDrops Package
-        </h2>
-        <div className="flex items-center justify-center gap-2 text-sm text-blue-600">
-          <div className="flex">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+    <div className="w-full max-w-sm mx-auto px-4 mt-8 space-y-4">
+      {/* Main Package - 6 Bottles */}
+      <div className="relative bg-blue-500 rounded-3xl p-6 text-white shadow-xl">
+        {/* Best Value Badge */}
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <div className="bg-yellow-500 text-black px-4 py-1 rounded-full text-xs font-bold">
+            ⭐ BEST VALUE
+          </div>
+        </div>
+
+        <div className="text-center pt-4">
+          {/* 6 Bottles Visual */}
+          <div className="flex justify-center gap-1 mb-4">
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className="relative">
+                <div className="w-8 h-12 bg-gradient-to-b from-orange-400 to-orange-600 rounded-t-full rounded-b-lg border border-orange-300"></div>
+                <div className="absolute top-0 w-8 h-3 bg-black rounded-full"></div>
+                <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-6 h-8 bg-white rounded-lg flex items-center justify-center">
+                  <div className="text-blue-600 text-[6px] font-bold leading-none">Blue<br/>Drops</div>
+                </div>
+              </div>
             ))}
           </div>
-          <span>4.9/5 stars • 50,000+ happy customers</span>
-        </div>
-      </div>
 
-      {/* Main Package - 6 Bottles (Full Width) */}
-      <div className="mb-6">
-        <div className="relative bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-6 text-white shadow-xl transform hover:scale-105 transition-all duration-300">
-          {/* Best Value Badge */}
-          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-            <div className="bg-yellow-500 text-black px-6 py-2 rounded-full text-sm font-black animate-pulse">
-              🏆 MOST POPULAR - BEST VALUE
+          <h3 className="text-2xl font-black mb-1">BLUEDROPS</h3>
+          <p className="text-white text-sm font-medium mb-3">6 BOTTLE PACKAGE</p>
+          
+          <p className="text-yellow-400 text-lg font-bold mb-4">YOU'RE SAVING $300</p>
+          
+          <Button
+            onClick={() => handlePurchaseClick("6-bottle")}
+            className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-black py-3 text-base rounded-xl mb-3"
+            id="six-bottle-package"
+          >
+            CLAIM OFFER NOW
+          </Button>
+
+          <p className="text-white text-sm mb-4">only $49 per bottle, $294 total</p>
+
+          {/* Trust Badges */}
+          <div className="flex justify-center gap-3 mb-4">
+            <div className="bg-white/20 px-3 py-1 rounded-full">
+              <span className="text-xs font-medium">⏰ 180-Day</span>
+            </div>
+            <div className="bg-white/20 px-3 py-1 rounded-full">
+              <span className="text-xs font-medium">🚚 Free Ship</span>
+            </div>
+            <div className="bg-white/20 px-3 py-1 rounded-full">
+              <span className="text-xs font-medium">🔒 Secure</span>
             </div>
           </div>
 
-          <div className="text-center">
-            <h3 className="text-2xl font-black mb-2">{mainPackage.name}</h3>
-            <p className="text-green-100 text-sm font-medium mb-4">{mainPackage.subtitle}</p>
-            
-            {/* Bottles Visual */}
-            <div className="flex justify-center mb-4">
-              <div className="flex gap-1">
-                {[...Array(mainPackage.bottles)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-6 h-8 bg-gradient-to-b from-blue-300 to-blue-500 rounded-full border border-blue-200"
-                  ></div>
-                ))}
-              </div>
+          {/* Payment Methods */}
+          <div className="bg-white rounded-lg p-3">
+            <div className="flex justify-center items-center gap-2 text-xs">
+              <span className="bg-blue-600 text-white px-2 py-1 rounded">VISA</span>
+              <span className="bg-red-500 text-white px-2 py-1 rounded">MC</span>
+              <span className="bg-orange-500 text-white px-2 py-1 rounded">DISC</span>
+              <span className="bg-blue-400 text-white px-2 py-1 rounded">AMEX</span>
+              <span className="bg-blue-700 text-white px-2 py-1 rounded">PP</span>
+              <span className="bg-purple-600 text-white px-2 py-1 rounded">DC</span>
             </div>
-
-            {/* Pricing */}
-            <div className="mb-4">
-              <div className="flex items-center justify-center gap-3 mb-2">
-                <span className="text-3xl font-black">{mainPackage.price}</span>
-                <span className="text-xl text-green-200 line-through">{mainPackage.originalPrice}</span>
-              </div>
-              <p className="text-green-100 text-sm mb-2">per bottle</p>
-              <div className="text-center">
-                <p className="text-2xl font-bold">Total: {mainPackage.totalPrice}</p>
-                <p className="text-green-200 line-through">Was: {mainPackage.totalOriginalPrice}</p>
-              </div>
-              <div className="bg-yellow-400 text-black px-4 py-2 rounded-full text-lg font-black mt-3 inline-block">
-                {mainPackage.savings}
-              </div>
-            </div>
-
-            {/* Features */}
-            <div className="flex justify-center gap-6 text-sm mb-6">
-              <div className="flex items-center gap-1">
-                <Check className="w-4 h-4" />
-                <span>180-day guarantee</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Check className="w-4 h-4" />
-                <span>Free shipping</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Check className="w-4 h-4" />
-                <span>24/7 support</span>
-              </div>
-            </div>
-
-            {/* Purchase Button */}
-            <Button
-              onClick={() => handlePurchaseClick(mainPackage.id)}
-              className="w-full max-w-md bg-yellow-500 hover:bg-yellow-400 text-black font-black py-4 text-lg rounded-xl transform hover:scale-105 transition-all duration-300"
-              id="six-bottle-package"
-            >
-              🚀 GET BEST VALUE PACKAGE
-            </Button>
           </div>
         </div>
       </div>
 
       {/* Secondary Packages - 50/50 Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {secondaryPackages.map((pkg) => (
-          <div
-            key={pkg.id}
-            className="bg-white rounded-2xl border-2 border-blue-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-blue-900 mb-1">{pkg.name}</h3>
-              <p className="text-blue-600 text-sm font-medium mb-4">{pkg.subtitle}</p>
-              
-              {/* Bottles Visual */}
-              <div className="flex justify-center mb-4">
-                <div className="flex gap-1">
-                  {[...Array(pkg.bottles)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-6 h-8 bg-gradient-to-b from-blue-400 to-blue-600 rounded-full border border-blue-300"
-                    ></div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Pricing */}
-              <div className="mb-4">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <span className="text-2xl font-black text-blue-900">{pkg.price}</span>
-                  <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
-                </div>
-                <p className="text-blue-600 text-sm mb-1">per bottle</p>
-                
-                {pkg.totalPrice && (
-                  <div className="text-center">
-                    <p className="text-lg font-bold text-green-600">Total: {pkg.totalPrice}</p>
-                    <p className="text-sm text-gray-500 line-through">Was: {pkg.totalOriginalPrice}</p>
+      <div className="grid grid-cols-2 gap-3">
+        {/* 3 Bottle Package */}
+        <div className="bg-blue-500 rounded-2xl p-4 text-white shadow-lg">
+          <div className="text-center">
+            {/* 3 Bottles Visual */}
+            <div className="flex justify-center gap-1 mb-3">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="relative">
+                  <div className="w-6 h-9 bg-gradient-to-b from-orange-400 to-orange-600 rounded-t-full rounded-b-lg border border-orange-300"></div>
+                  <div className="absolute top-0 w-6 h-2 bg-black rounded-full"></div>
+                  <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-6 bg-white rounded-lg flex items-center justify-center">
+                    <div className="text-blue-600 text-[5px] font-bold leading-none">Blue<br/>Drops</div>
                   </div>
-                )}
-                
-                <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold mt-2 inline-block">
-                  {pkg.savings}
                 </div>
-              </div>
+              ))}
+            </div>
 
-              {/* Features */}
-              <div className="space-y-2 mb-6 text-left">
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-700">180-day guarantee</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-700">Free shipping</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-green-500" />
-                  <span className="text-sm text-gray-700">24/7 support</span>
-                </div>
-              </div>
+            <h4 className="text-lg font-black mb-1">BLUEDROPS</h4>
+            <p className="text-white text-xs font-medium mb-2">3 BOTTLE PACKAGE</p>
+            
+            <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $398</p>
+            
+            <Button
+              onClick={() => handlePurchaseClick("3-bottle")}
+              className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 text-sm rounded-lg mb-2"
+            >
+              BUY NOW
+            </Button>
 
-              {/* Purchase Button */}
-              <Button
-                onClick={() => handlePurchaseClick(pkg.id)}
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 rounded-xl transition-all duration-300 transform hover:scale-105"
-              >
-                💊 Choose This Package
-              </Button>
+            <p className="text-white text-xs mb-3">$66 per bottle, $198 total</p>
+
+            {/* Trust Badges */}
+            <div className="flex justify-center gap-1">
+              <div className="bg-white/20 px-2 py-1 rounded-full">
+                <span className="text-[10px] font-medium">⏰180d</span>
+              </div>
+              <div className="bg-white/20 px-2 py-1 rounded-full">
+                <span className="text-[10px] font-medium">🚚Free</span>
+              </div>
+              <div className="bg-white/20 px-2 py-1 rounded-full">
+                <span className="text-[10px] font-medium">🔒Safe</span>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
 
-      {/* Trust Indicators */}
-      <div className="text-center mt-6">
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-600 mb-4">
-          <div className="flex items-center gap-1">
-            <Check className="w-4 h-4 text-green-500" />
-            <span>✅ FDA Registered Facility</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Check className="w-4 h-4 text-green-500" />
-            <span>🔒 Secure Checkout</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <Check className="w-4 h-4 text-green-500" />
-            <span>🚚 Free Worldwide Shipping</span>
+        {/* 1 Bottle Package */}
+        <div className="bg-blue-500 rounded-2xl p-4 text-white shadow-lg">
+          <div className="text-center">
+            {/* 1 Bottle Visual */}
+            <div className="flex justify-center mb-3">
+              <div className="relative">
+                <div className="w-6 h-9 bg-gradient-to-b from-orange-400 to-orange-600 rounded-t-full rounded-b-lg border border-orange-300"></div>
+                <div className="absolute top-0 w-6 h-2 bg-black rounded-full"></div>
+                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-6 bg-white rounded-lg flex items-center justify-center">
+                  <div className="text-blue-600 text-[5px] font-bold leading-none">Blue<br/>Drops</div>
+                </div>
+              </div>
+            </div>
+
+            <h4 className="text-lg font-black mb-1">BLUEDROPS</h4>
+            <p className="text-white text-xs font-medium mb-2">1 BOTTLE PACKAGE</p>
+            
+            <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $309</p>
+            
+            <Button
+              onClick={() => handlePurchaseClick("1-bottle")}
+              className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 text-sm rounded-lg mb-2"
+            >
+              BUY NOW
+            </Button>
+
+            <p className="text-white text-xs mb-3">$89, $79 + $9.99 ship</p>
+
+            {/* Trust Badges */}
+            <div className="flex justify-center gap-1">
+              <div className="bg-white/20 px-2 py-1 rounded-full">
+                <span className="text-[10px] font-medium">⏰180d</span>
+              </div>
+              <div className="bg-white/20 px-2 py-1 rounded-full">
+                <span className="text-[10px] font-medium">$9.99</span>
+              </div>
+              <div className="bg-white/20 px-2 py-1 rounded-full">
+                <span className="text-[10px] font-medium">🔒Safe</span>
+              </div>
+            </div>
           </div>
         </div>
-        <p className="text-xs text-gray-500">
-          * This offer is not available in stores and may be removed at any time
-        </p>
       </div>
     </div>
   );
