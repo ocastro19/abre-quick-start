@@ -116,14 +116,17 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
 
             {/* Trust Badges */}
             <div className="flex justify-center gap-1">
-              <div className="bg-white/20 px-2 py-1 rounded-full">
-                <span className="text-[10px] font-medium">⏰60d</span>
+              <div className="bg-blue-400/30 px-2 py-1 rounded-full flex items-center gap-1">
+                <span className="text-xs">⏰</span>
+                <span className="text-[10px] font-medium">60d</span>
               </div>
-              <div className="bg-white/20 px-2 py-1 rounded-full">
-                <span className="text-[10px] font-medium">🚚Free</span>
+              <div className="bg-blue-400/30 px-2 py-1 rounded-full flex items-center gap-1">
+                <span className="text-xs">🚚</span>
+                <span className="text-[10px] font-medium">Free</span>
               </div>
-              <div className="bg-white/20 px-2 py-1 rounded-full">
-                <span className="text-[10px] font-medium">🔒Safe</span>
+              <div className="bg-blue-400/30 px-2 py-1 rounded-full flex items-center gap-1">
+                <span className="text-xs">🔒</span>
+                <span className="text-[10px] font-medium">Safe</span>
               </div>
             </div>
           </div>
@@ -144,7 +147,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             <h4 className="text-lg font-black mb-1">EAGLEBOOST</h4>
             <p className="text-white text-xs font-medium mb-2">2 BOTTLE PACKAGE</p>
             
-            <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $309</p>
+            <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $200</p>
             
             <Button
               onClick={() => handlePurchaseClick("2-bottle")}
@@ -154,18 +157,21 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
               BUY NOW
             </Button>
 
-            <p className="text-white text-xs mb-3">$89, $79 + $9.99 ship</p>
+            <p className="text-white text-xs mb-3">$69 per bottle, $138 total</p>
 
             {/* Trust Badges */}
             <div className="flex justify-center gap-1">
-              <div className="bg-white/20 px-2 py-1 rounded-full">
-                <span className="text-[10px] font-medium">⏰60d</span>
+              <div className="bg-blue-400/30 px-2 py-1 rounded-full flex items-center gap-1">
+                <span className="text-xs">⏰</span>
+                <span className="text-[10px] font-medium">60d</span>
               </div>
-              <div className="bg-white/20 px-2 py-1 rounded-full">
+              <div className="bg-blue-400/30 px-2 py-1 rounded-full flex items-center gap-1">
+                <span className="text-xs">🚚</span>
                 <span className="text-[10px] font-medium">$9.99</span>
               </div>
-              <div className="bg-white/20 px-2 py-1 rounded-full">
-                <span className="text-[10px] font-medium">🔒Safe</span>
+              <div className="bg-blue-400/30 px-2 py-1 rounded-full flex items-center gap-1">
+                <span className="text-xs">🔒</span>
+                <span className="text-[10px] font-medium">Safe</span>
               </div>
             </div>
           </div>
