@@ -76,7 +76,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             <img 
               src={paymentCardsImage} 
               alt="Accepted Payment Methods" 
-              className="w-full h-auto max-w-[250px] mx-auto"
+              className="w-full h-auto max-w-[350px] mx-auto"
             />
           </div>
         </div>
