@@ -23,28 +23,24 @@ const DoctorTrustCTA = () => {
       <div className="text-center">
         {/* Main CTA Button */}
         <div className="relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-sm opacity-75 animate-pulse"></div>
           <Button
             onClick={handleClick}
             variant="cta-primary"
-            className="relative px-6"
+            className="relative px-6 min-h-[80px] text-white rounded-3xl"
             style={{ touchAction: "manipulation" }}
           >
-            <div className="flex items-center justify-center gap-3">
-              <span className="text-2xl">👨‍⚕️</span>
-              <span className="leading-tight text-center font-bold">
-                If doctors trust it, I trust it too — start my treatment now
-              </span>
-            </div>
+            <span className="leading-tight text-center font-bold text-lg">
+              Start Your Doctor-Approved Treatment Tap Now!
+            </span>
           </Button>
         </div>
         
         {/* Supporting Text */}
-        <div className="mt-6 space-y-3">
-          <p className="text-blue-600 text-base font-bold">
-            👋 Tap to start your doctor-approved treatment
+        <div className="mt-4 space-y-2">
+          <p className="text-yellow-400 text-lg font-bold">
+            👆 Tap to start your doctor-approved treatment
           </p>
-          <p className="text-blue-500 text-sm">
+          <p className="text-blue-200 text-sm">
             Clinically reviewed • MD verified • 180-day guarantee
           </p>
         </div>

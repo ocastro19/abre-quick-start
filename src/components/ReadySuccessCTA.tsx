@@ -23,29 +23,25 @@ const ReadySuccessCTA = () => {
       <div className="text-center">
         {/* Main CTA Button */}
         <div className="relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-green-600 rounded-2xl blur-sm opacity-75 animate-pulse"></div>
           <Button
             onClick={handleClick}
-            variant="cta-success"
-            className="relative px-6"
+            variant="cta-primary"
+            className="relative px-6 min-h-[80px] text-white rounded-3xl"
             style={{ touchAction: "manipulation" }}
           >
-            <div className="flex items-center justify-center gap-3">
-              <span className="text-2xl">🚀</span>
-              <span className="leading-tight text-center font-bold">
-                I'm ready to be the next success story!
-              </span>
-            </div>
+            <span className="leading-tight text-center font-bold text-lg">
+              Start Your Doctor-Approved Treatment Tap Now!
+            </span>
           </Button>
         </div>
         
         {/* Supporting Text */}
         <div className="mt-4 space-y-2">
-          <p className="text-green-600 text-sm font-bold">
-            👋 Click here to secure your transformation
+          <p className="text-yellow-400 text-lg font-bold">
+            👆 Tap to start your doctor-approved treatment
           </p>
-          <p className="text-blue-500 text-xs">
-            Join 50,000+ men who chose BlueDrops for lasting results
+          <p className="text-blue-200 text-sm">
+            Clinically reviewed • MD verified • 180-day guarantee
           </p>
         </div>
       </div>
