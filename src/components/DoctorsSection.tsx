@@ -1,6 +1,7 @@
 import { useState } from "react";
 import drMehmetOzImage from "@/assets/dr-mehmet-oz.jpg";
 import johnSinnerImage from "@/assets/john-sinner.jpg";
+import dwayneJohnsonImage from "@/assets/dwayne-johnson.jpg";
 
 const DoctorsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,6 +36,27 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
       quote: "For me, real performance goes beyond the screen. Eagle Boost has been my secret weapon — helping me overcome ED and stay confident when it matters most.",
       verified: true,
       videoIframe: `<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_68c44af41b231e3484f1d266_wrapper" style="margin: 0 auto; width: 100%; "> <div style="position: relative; padding: 56.41025641025641% 0 0 0;" id="ifr_68c44af41b231e3484f1d266_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68c44af41b231e3484f1d266" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68c44af41b231e3484f1d266/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>`
+    },
+    {
+      name: "Dwayne Johnson (The Rock)",
+      title: "Actor",
+      hospital: "",
+      image: dwayneJohnsonImage,
+      quote: "It's not just about being strong in the gym. It's about being strong in life. Eagle Boost is the secret weapon for men who want to regain power and confidence.",
+      verified: true,
+      videoIframe: `<div id="ifr_68c44ae0c784f83dc7b46aa4_wrapper" style="margin:0 auto; width:100%;">
+<div id="ifr_68c44ae0c784f83dc7b46aa4_aspect" style="position:relative; padding:74.28571428571429% 0 0 0;">
+<iframe
+id="ifr_68c44ae0c784f83dc7b46aa4"
+frameborder="0"
+allowfullscreen
+referrerpolicy="origin"
+src="about:blank"
+style="position:absolute; top:0; left:0; width:100%; height:100%;"
+onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68c44ae0c784f83dc7b46aa4/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href);">
+</iframe>
+</div>
+</div>`
     }
   ];
 
