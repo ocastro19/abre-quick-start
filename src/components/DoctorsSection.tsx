@@ -113,7 +113,8 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
       <div 
         className="relative w-full max-w-sm mx-auto overflow-visible mb-6"
         style={{
-          height: '600px',
+          height: 'auto',
+          minHeight: '500px',
           padding: '0 32px',
           maxWidth: 'min(400px, 100vw)'
         }}
@@ -124,7 +125,7 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
           return (
             <div
               key={index}
-              className="absolute inset-0 mx-2 transition-all duration-700 ease-in-out cursor-pointer"
+              className="absolute inset-0 mx-2 transition-all duration-700 ease-in-out cursor-pointer h-fit"
               style={{
                 ...position,
                 maxWidth: 'calc(100% - 16px)',
@@ -132,11 +133,11 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
               }}
               onClick={() => setCurrentIndex(index)}
             >
-              <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-6 h-full">
+              <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-4 sm:p-6 w-full">
                 {/* Doctor Info Row - Photo left, Info right */}
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
                   {/* Doctor Photo */}
-                  <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-200 flex-shrink-0">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-blue-200 flex-shrink-0">
                     <img 
                       src={doctor.image} 
                       alt={doctor.name}
@@ -146,13 +147,13 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
                   
                   {/* Doctor Info */}
                   <div className="flex-1">
-                    <h3 className="font-bold text-blue-900 text-xl mb-1">{doctor.name}</h3>
-                    <p className="text-blue-600 text-sm mb-1">{doctor.title}</p>
-                    <p className="text-blue-500 text-sm mb-3">{doctor.hospital && doctor.hospital}</p>
+                    <h3 className="font-bold text-blue-900 text-lg sm:text-xl mb-1">{doctor.name}</h3>
+                    <p className="text-blue-600 text-xs sm:text-sm mb-1">{doctor.title}</p>
+                    <p className="text-blue-500 text-xs sm:text-sm mb-2 sm:mb-3">{doctor.hospital && doctor.hospital}</p>
                     
                     {doctor.verified && (
                       <div>
-                        <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        <span className="bg-green-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-bold">
                           ✓ VERIFIED
                         </span>
                       </div>
@@ -161,8 +162,8 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
                 </div>
                 
                 {/* Quote Section */}
-                <div className="bg-blue-50 rounded-lg p-4 mb-4">
-                  <p className="text-blue-800 text-base font-medium italic leading-relaxed">
+                <div className="bg-blue-50 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
+                  <p className="text-blue-800 text-sm sm:text-base font-medium italic leading-relaxed">
                     "{doctor.quote}"
                   </p>
                 </div>
