@@ -45,7 +45,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             />
           </div>
 
-          <h3 className="text-2xl font-black mb-1">BLUEDROPS</h3>
+          <h3 className="text-2xl font-black mb-1">EAGLEBOOST</h3>
           <p className="text-white text-sm font-medium mb-3">6 BOTTLE PACKAGE</p>
           
           <p className="text-yellow-400 text-lg font-bold mb-4">YOU'RE SAVING $300</p>
@@ -64,7 +64,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
           {/* Trust Badges */}
           <div className="flex justify-center gap-3 mb-4">
             <div className="bg-white/20 px-3 py-1 rounded-full">
-              <span className="text-xs font-medium">⏰ 180-Day</span>
+              <span className="text-xs font-medium">⏰ 60-Day</span>
             </div>
             <div className="bg-white/20 px-3 py-1 rounded-full">
               <span className="text-xs font-medium">🚚 Free Ship</span>
@@ -99,7 +99,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
               />
             </div>
 
-            <h4 className="text-lg font-black mb-1">BLUEDROPS</h4>
+            <h4 className="text-lg font-black mb-1">EAGLEBOOST</h4>
             <p className="text-white text-xs font-medium mb-2">3 BOTTLE PACKAGE</p>
             
             <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $398</p>
@@ -117,7 +117,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             {/* Trust Badges */}
             <div className="flex justify-center gap-1">
               <div className="bg-white/20 px-2 py-1 rounded-full">
-                <span className="text-[10px] font-medium">⏰180d</span>
+                <span className="text-[10px] font-medium">⏰60d</span>
               </div>
               <div className="bg-white/20 px-2 py-1 rounded-full">
                 <span className="text-[10px] font-medium">🚚Free</span>
@@ -141,7 +141,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
               />
             </div>
 
-            <h4 className="text-lg font-black mb-1">BLUEDROPS</h4>
+            <h4 className="text-lg font-black mb-1">EAGLEBOOST</h4>
             <p className="text-white text-xs font-medium mb-2">2 BOTTLE PACKAGE</p>
             
             <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $309</p>
@@ -159,7 +159,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             {/* Trust Badges */}
             <div className="flex justify-center gap-1">
               <div className="bg-white/20 px-2 py-1 rounded-full">
-                <span className="text-[10px] font-medium">⏰180d</span>
+                <span className="text-[10px] font-medium">⏰60d</span>
               </div>
               <div className="bg-white/20 px-2 py-1 rounded-full">
                 <span className="text-[10px] font-medium">$9.99</span>

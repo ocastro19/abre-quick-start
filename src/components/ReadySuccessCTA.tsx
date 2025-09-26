@@ -41,7 +41,7 @@ const ReadySuccessCTA = () => {
             👆 Tap to start your doctor-approved treatment
           </p>
           <p className="text-blue-200 text-sm">
-            Clinically reviewed • MD verified • 180-day guarantee
+            Clinically reviewed • MD verified • 60-day guarantee
           </p>
         </div>
       </div>

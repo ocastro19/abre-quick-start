@@ -8,8 +8,8 @@ const Footer = () => {
             🚀 Your Transformation Starts Today
           </h2>
           <p className="text-blue-600 text-sm leading-relaxed">
-            Join thousands of men who have already discovered the power of BlueDrops. With 
-            our 180-day guarantee, you have nothing to lose and everything to gain.
+            Join thousands of men who have already discovered the power of EagleBoost. With 
+            our 60-day guarantee, you have nothing to lose and everything to gain.
           </p>
         </div>
       </div>
@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="space-y-3">
           {/* Copyright */}
           <div className="text-blue-600 text-sm font-medium">
-            Copyright ©2024 | Blue Drops
+            Copyright ©2024 | Eagle Boost
           </div>
           <div className="text-blue-600 text-sm">
             All Rights Reserved

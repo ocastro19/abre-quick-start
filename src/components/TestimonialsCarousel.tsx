@@ -8,7 +8,7 @@ const TestimonialsCarousel = () => {
       name: "Michael R.",
       location: "Texas",
       image: "👨",
-      quote: "BlueDrops completely changed my life. I felt the difference in just 2 weeks!",
+      quote: "EagleBoost completely changed my life. I felt the difference in just 2 weeks!",
       rating: 5.0,
       verified: true
     },
@@ -16,7 +16,7 @@ const TestimonialsCarousel = () => {
       name: "John O.", 
       location: "Florida",
       image: "👨‍🦳",
-      quote: "My wife noticed the difference immediately. I went from feeling like there was no hope. BlueDrops gave me my confidence back!",
+      quote: "My wife noticed the difference immediately. I went from feeling like there was no hope. EagleBoost gave me my confidence back!",
       rating: 5.0,
       verified: true
     },
@@ -24,7 +24,7 @@ const TestimonialsCarousel = () => {
       name: "David M.",
       location: "California",
       image: "👨‍💼",
-      quote: "After trying everything else, BlueDrops was the only thing that actually worked. I'm amazed by the results!",
+      quote: "After trying everything else, EagleBoost was the only thing that actually worked. I'm amazed by the results!",
       rating: 5.0,
       verified: true
     }
@@ -75,7 +75,7 @@ const TestimonialsCarousel = () => {
           Just Real Results.
         </h2>
         <p className="text-blue-600 text-sm font-medium mb-2">
-          What Real Men Are Saying About BlueDrops
+          What Real Men Are Saying About EagleBoost
         </p>
         <p className="text-blue-500 text-xs">
           👋 Drag to navigate between testimonials

@@ -69,7 +69,7 @@ const UpsellModal = ({
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green-500">✅</span>
-              <span className="text-sm text-gray-700">Same 180-day money-back guarantee</span>
+              <span className="text-sm text-gray-700">Same 60-day money-back guarantee</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green-500">✅</span>

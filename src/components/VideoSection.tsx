@@ -12,7 +12,7 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
     <section className="w-full max-w-sm mx-auto px-4 pb-8">
       {/* BlueDrops Logo */}
       <div className="text-center mb-4">
-        <h1 className="text-blue-600 text-lg font-bold">BlueDrops</h1>
+        <h1 className="text-blue-600 text-lg font-bold">EagleBoost</h1>
       </div>
 
       {/* Red Banner */}

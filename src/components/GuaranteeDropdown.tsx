@@ -24,7 +24,7 @@ const GuaranteeDropdown = () => {
                 <div className="text-center">
                   <div className="text-white text-xs font-bold leading-none">100%</div>
                   <div className="bg-black text-white text-xs font-bold px-2 py-1 rounded-full mt-1">
-                    <div className="text-[10px] leading-none">180</div>
+                    <div className="text-[10px] leading-none">60</div>
                     <div className="text-[8px] leading-none">DAYS</div>
                   </div>
                 </div>
@@ -34,7 +34,7 @@ const GuaranteeDropdown = () => {
             {/* Title */}
             <div>
               <h3 className="text-xl font-bold text-orange-500 mb-1">
-                180 Days Guarantee
+                60 Days Guarantee
               </h3>
               <p className="text-blue-600 text-sm font-medium">
                 100% money-back guarantee
@@ -65,10 +65,10 @@ const GuaranteeDropdown = () => {
             {/* Guarantee Text */}
             <div className="text-blue-700 text-sm leading-relaxed mb-6">
               <p>
-                Your order today is protected by our iron-clad 180-day 100% money-back guarantee. If 
-                you're not amazed by how well BlueDrops enhances your vitality and performance, helping 
+                Your order today is protected by our iron-clad 60-day 100% money-back guarantee. If 
+                you're not amazed by how well EagleBoost enhances your vitality and performance, helping 
                 you overcome the challenges of performance problems, or if you don't feel more confident 
-                and satisfied, just let us know at any time within the next 180 days, and we'll refund every 
+                and satisfied, just let us know at any time within the next 60 days, and we'll refund every
                 penny of your investment. No questions asked.
               </p>
             </div>
@@ -76,7 +76,7 @@ const GuaranteeDropdown = () => {
             {/* BlueDrops Logo */}
             <div className="text-center">
               <div className="inline-flex items-center gap-2">
-                <span className="text-blue-600 font-bold text-lg">BlueDrops</span>
+                <span className="text-blue-600 font-bold text-lg">EagleBoost</span>
                 <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
               </div>
             </div>

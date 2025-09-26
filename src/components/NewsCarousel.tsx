@@ -73,7 +73,7 @@ const NewsCarousel = () => {
           Major News Outlets
         </h2>
         <p className="text-blue-600 text-sm font-medium mb-2">
-          Leading Health Publications Cover BlueDrops
+          Leading Health Publications Cover EagleBoost
         </p>
         <p className="text-blue-500 text-xs">
           👋 Drag to navigate between news articles

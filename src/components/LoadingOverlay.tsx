@@ -14,7 +14,7 @@ const LoadingOverlay = ({ show = false }: LoadingOverlayProps) => {
             <span className="text-white text-2xl">💊</span>
           </div>
         </div>
-        <h2 className="text-xl font-bold text-blue-900 mb-2">BlueDrops</h2>
+        <h2 className="text-xl font-bold text-blue-900 mb-2">EagleBoost</h2>
         <p className="text-blue-700 text-sm">Loading your transformation...</p>
       </div>
     </div>
