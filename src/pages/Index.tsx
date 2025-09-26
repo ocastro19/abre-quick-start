@@ -15,6 +15,7 @@ import NewsOutletsSection from "@/components/NewsOutletsSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ScienceSection from "@/components/ScienceSection";
 import FinalCTASection from "@/components/FinalCTASection";
+import FAQSection from "@/components/FAQSection";
 import UpsellModal from "@/components/UpsellModal";
 import LoadingOverlay from "@/components/LoadingOverlay";
 
@@ -229,6 +230,9 @@ const Index = () => {
               onPurchase={handlePurchase}
               onSecondaryPackageClick={handleSecondaryPackageClick}
             />
+
+            {/* FAQ Section - ANTES DO FOOTER */}
+            <FAQSection />
 
             {/* Footer */}
             <Footer />
