@@ -1,19 +1,15 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import VideoSection from "@/components/VideoSection";
+import HeroSection from "@/components/HeroSection";
+import ProductSection from "@/components/ProductSection";
 import DoctorsSection from "@/components/DoctorsSection";
 import DoctorTrustCTA from "@/components/DoctorTrustCTA";
-import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import ReadySuccessCTA from "@/components/ReadySuccessCTA";
 import NewsCarousel from "@/components/NewsCarousel";
 import GuaranteeDropdown from "@/components/GuaranteeDropdown";
+import TransformationSection from "@/components/TransformationSection";
 import Footer from "@/components/Footer";
-import ProductSection from "@/components/ProductSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import NoFiltersSection from "@/components/NoFiltersSection";
-import NewsOutletsSection from "@/components/NewsOutletsSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import ScienceSection from "@/components/ScienceSection";
 import FAQSection from "@/components/FAQSection";
 import UpsellModal from "@/components/UpsellModal";
 import LoadingOverlay from "@/components/LoadingOverlay";
@@ -172,67 +168,50 @@ const Index = () => {
       )}
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-6 sm:py-8 max-w-full">
-        {/* Header Section */}
-        <div className="flex flex-col items-center justify-center w-full max-w-md mx-auto">
-          {/* Video Section */}
-          <VideoSection 
-            isVideoLoaded={isVideoLoaded}
-            isVideoError={isVideoError}
-            onRetry={handleVideoRetry}
-          />
-        </div>
+        {/* Header Section - Video removed, now starts with Hero */}
 
         {/* Content that shows after video or in admin mode */}
         {(showContent || isAdminMode || isBoltMode) && (
           <>
-            {/* Product Offers Section - LOGO APÓS O VSL */}
+            {/* 1. Baking Soda Hero */}
+            <HeroSection />
+
+            {/* 2. Oferta Principal */}
             <ProductSection 
               showPurchaseButton={showPurchaseButton}
               onPurchase={handlePurchase}
               onSecondaryPackageClick={handleSecondaryPackageClick}
             />
 
-            {/* Doctors Section - DEPOIS das ofertas */}
+            {/* 3. Credibilidade - Clinically Reviewed. Doctor Approved. */}
             <DoctorsSection />
 
-            {/* Doctor Trust CTA - Logo após os médicos */}
+            {/* 4. CTA */}
             <DoctorTrustCTA />
 
-            {/* Testimonials Carousel - "No Filters. Just Real Results." */}
-            <TestimonialsCarousel />
-
-            {/* Ready Success CTA - Logo após testemunhos */}
-            <ReadySuccessCTA />
-
-            {/* News Carousel - "As Seen In Major News Outlets" */}
-            <NewsCarousel />
-
-            {/* Guarantee Dropdown */}
-            <GuaranteeDropdown />
-
-            {/* Testimonials Section with Fan Layout */}
+            {/* 5. Resultados Reais - No Filters. Just Real Results. */}
             <TestimonialsSection />
 
-            {/* No Filters Section */}
-            <NoFiltersSection />
+            {/* 6. CTA */}
+            <ReadySuccessCTA />
 
-            {/* News Outlets Section */}
-            <NewsOutletsSection />
+            {/* 7. Mídia - As Seen In Major News Outlets */}
+            <NewsCarousel />
 
-            <BenefitsSection />
-            <ScienceSection />
+            {/* 8. Garantia - drop de garantia */}
+            <GuaranteeDropdown />
 
-            {/* Final Product Offers Section */}
-            <ProductSection 
+            {/* 9. Transformação - Ready to Transform Your Life? */}
+            <TransformationSection
               showPurchaseButton={showPurchaseButton}
               onPurchase={handlePurchase}
               onSecondaryPackageClick={handleSecondaryPackageClick}
             />
 
-            {/* FAQ Section */}
+            {/* 11. FAQ */}
             <FAQSection />
 
-            {/* Footer */}
+            {/* 12. Rodapé */}
             <Footer />
           </>
         )}
