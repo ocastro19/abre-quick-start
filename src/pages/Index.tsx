@@ -6,6 +6,7 @@ import DoctorTrustCTA from "@/components/DoctorTrustCTA";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import ReadySuccessCTA from "@/components/ReadySuccessCTA";
 import NewsCarousel from "@/components/NewsCarousel";
+import GuaranteeDropdown from "@/components/GuaranteeDropdown";
 import ProductSection from "@/components/ProductSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NoFiltersSection from "@/components/NoFiltersSection";
@@ -197,6 +198,9 @@ const Index = () => {
 
             {/* News Carousel - "As Seen In Major News Outlets" */}
             <NewsCarousel />
+
+            {/* Guarantee Dropdown */}
+            <GuaranteeDropdown />
 
             {/* Product Offers Section - DEPOIS dos médicos */}
             <ProductSection 
