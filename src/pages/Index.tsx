@@ -7,6 +7,7 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import ReadySuccessCTA from "@/components/ReadySuccessCTA";
 import NewsCarousel from "@/components/NewsCarousel";
 import GuaranteeDropdown from "@/components/GuaranteeDropdown";
+import Footer from "@/components/Footer";
 import ProductSection from "@/components/ProductSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import NoFiltersSection from "@/components/NoFiltersSection";
@@ -201,6 +202,16 @@ const Index = () => {
 
             {/* Guarantee Dropdown */}
             <GuaranteeDropdown />
+
+            {/* Product Offers Section - DEPOIS dos médicos */}
+            <ProductSection 
+              showPurchaseButton={showPurchaseButton}
+              onPurchase={handlePurchase}
+              onSecondaryPackageClick={handleSecondaryPackageClick}
+            />
+
+            {/* Footer */}
+            <Footer />
 
             {/* Product Offers Section - DEPOIS dos médicos */}
             <ProductSection 
