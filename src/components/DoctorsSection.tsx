@@ -101,31 +101,36 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
               onClick={() => setCurrentIndex(index)}
             >
               <div className="bg-white rounded-2xl border-2 border-blue-100 shadow-lg p-6 h-full">
-                {/* Doctor Image */}
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-3 border-2 border-blue-200">
+                {/* Doctor Info Row - Photo left, Info right */}
+                <div className="flex items-start gap-4 mb-4">
+                  {/* Doctor Photo */}
+                  <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-blue-200 flex-shrink-0">
                     <img 
                       src={doctor.image} 
                       alt={doctor.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="font-bold text-blue-900 text-lg">{doctor.name}</h3>
-                  <p className="text-blue-600 text-sm">{doctor.title}</p>
-                  <p className="text-blue-400 text-sm">{doctor.hospital}</p>
                   
-                  {doctor.verified && (
-                    <div className="mt-2">
-                      <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        ✓ VERIFIED
-                      </span>
-                    </div>
-                  )}
+                  {/* Doctor Info */}
+                  <div className="flex-1">
+                    <h3 className="font-bold text-blue-900 text-xl mb-1">{doctor.name}</h3>
+                    <p className="text-blue-600 text-sm mb-1">{doctor.title}</p>
+                    <p className="text-blue-500 text-sm mb-3">{doctor.hospital}</p>
+                    
+                    {doctor.verified && (
+                      <div>
+                        <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                          ✓ MD VERIFIED
+                        </span>
+                      </div>
+                    )}
+                  </div>
                 </div>
                 
-                {/* Quote */}
-                <div className="bg-blue-50 rounded-lg p-3 text-center mb-4">
-                  <p className="text-blue-800 text-sm font-medium italic leading-relaxed">
+                {/* Quote Section */}
+                <div className="bg-blue-50 rounded-lg p-4 mb-4">
+                  <p className="text-blue-800 text-base font-medium italic leading-relaxed">
                     "{doctor.quote}"
                   </p>
                 </div>
@@ -133,7 +138,7 @@ onload="this.onload=null; this.src='https://scripts.converteai.net/d37be28a-dfe1
                 {/* Video iframe */}
                 {doctor.videoIframe && (
                   <div 
-                    className="w-full"
+                    className="w-full rounded-lg overflow-hidden"
                     dangerouslySetInnerHTML={{__html: doctor.videoIframe}}
                   />
                 )}
