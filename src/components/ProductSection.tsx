@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import bottlesImage from "@/assets/bottles-offer.jpg";
+import newBottlesImage from "@/assets/new-bottles-offer.jpg";
 import paymentCardsImage from "@/assets/payment-cards.jpg";
 
 interface ProductSectionProps {
@@ -37,7 +37,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
           {/* Bottles Image */}
           <div className="flex justify-center mb-4">
             <img 
-              src={bottlesImage} 
+              src={newBottlesImage} 
               alt="BlueDrops 6 Bottle Package" 
               className="w-full max-w-[300px] h-auto"
             />
