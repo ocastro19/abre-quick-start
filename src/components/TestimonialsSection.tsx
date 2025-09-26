@@ -29,6 +29,33 @@ const TestimonialsSection = () => {
     quote: "Safe, natural, and effective. Best decision I ever made.",
     stars: 5
   }];
-  return;
+  return (
+    <div className="py-16 bg-gradient-to-b from-blue-50 to-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+          What Our Customers Say
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">{testimonial.avatar}</span>
+                <div>
+                  <h4 className="font-semibold">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-600">{testimonial.age}, {testimonial.location}</p>
+                </div>
+              </div>
+              <div className="flex mb-4">
+                {[...Array(testimonial.stars)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 export default TestimonialsSection;
