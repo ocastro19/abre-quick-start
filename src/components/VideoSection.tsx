@@ -23,13 +23,7 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
       {/* Main Title */}
       <div className="text-center mb-6">
         <h2 className="text-4xl font-bold text-blue-900 leading-tight">
-          Baking Soda
-        </h2>
-        <h2 className="text-4xl font-bold text-cyan-400 leading-tight">
-          cures
-        </h2>
-        <h2 className="text-4xl font-bold text-blue-600 leading-tight">
-          Impotence
+          Discover Celtic Salt Trick
         </h2>
       </div>
 
