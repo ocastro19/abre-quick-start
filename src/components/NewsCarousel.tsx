@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import cnnLogo from "@/assets/cnn-logo.png";
+import webmdLogo from "@/assets/webmd-logo.png";
+import mayoClinicLogo from "@/assets/mayo-clinic-logo.png";
 
 const NewsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -7,27 +10,24 @@ const NewsCarousel = () => {
   const newsArticles = [
     {
       outlet: "CNN Health",
-      logo: "📺", 
+      logo: cnnLogo,
       title: "A Surprising Natural Solution to Men's Performance Issues",
       preview: "CNN reveals the growing demand for natural solutions among men over 40. Products like EagleBoost are gaining ground as alternatives to traditional treatments.",
-      ctaText: "Read Full Article",
-      image: "/src/assets/cnn-news-article.jpg"
+      ctaText: "Read Full Article"
     },
     {
       outlet: "WebMD",
-      logo: "🏥",
+      logo: webmdLogo,
       title: "Natural Male Enhancers Gaining Ground in 2025",
       preview: "WebMD highlights studies on the use of simple ingredients to improve male sexual health and performance naturally.",
-      ctaText: "Read Full Article",
-      image: "/src/assets/webmd-news-article.jpg"
+      ctaText: "Read Full Article"
     },
     {
       outlet: "Mayo Clinic",
-      logo: "🏥",
+      logo: mayoClinicLogo,
       title: "The Science Behind Herbal Support for Men's Vitality",
       preview: "Mayo Clinic explores the benefits and limitations of natural approaches, suggesting products like EagleBoost may complement traditional treatment.",
-      ctaText: "Read Full Article",
-      image: "/src/assets/mayo-clinic-news-article.jpg"
+      ctaText: "Read Full Article"
     }
   ];
 
@@ -110,7 +110,11 @@ const NewsCarousel = () => {
                 {/* News Outlet Header */}
                 <div className="text-center mb-4">
                   <div className="flex items-center justify-center gap-3 mb-3">
-                    <div className="text-3xl">{article.logo}</div>
+                    <img 
+                      src={article.logo} 
+                      alt={`${article.outlet} logo`} 
+                      className="w-12 h-12 object-contain"
+                    />
                     <h3 className="font-bold text-blue-900 text-lg">{article.outlet}</h3>
                   </div>
                 </div>
