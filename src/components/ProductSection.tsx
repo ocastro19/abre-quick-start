@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import newBottlesImage from "@/assets/new-bottles-offer.jpg";
 import paymentCardsImage from "@/assets/payment-cards.jpg";
+import threeBottlesImage from "@/assets/3-bottles-offer.jpg";
+import twoBottlesImage from "@/assets/2-bottles-offer.jpg";
 
 interface ProductSectionProps {
   showPurchaseButton: boolean;
@@ -87,17 +89,13 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
         {/* 3 Bottle Package */}
         <div className="bg-blue-500 rounded-2xl p-4 text-white shadow-lg">
           <div className="text-center">
-            {/* 3 Bottles Visual */}
-            <div className="flex justify-center gap-1 mb-3">
-              {[...Array(3)].map((_, i) => (
-                <div key={i} className="relative">
-                  <div className="w-6 h-9 bg-gradient-to-b from-orange-400 to-orange-600 rounded-t-full rounded-b-lg border border-orange-300"></div>
-                  <div className="absolute top-0 w-6 h-2 bg-black rounded-full"></div>
-                  <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-6 bg-white rounded-lg flex items-center justify-center">
-                    <div className="text-blue-600 text-[5px] font-bold leading-none">Blue<br/>Drops</div>
-                  </div>
-                </div>
-              ))}
+            {/* 3 Bottles Image */}
+            <div className="flex justify-center mb-3">
+              <img 
+                src={threeBottlesImage} 
+                alt="BlueDrops 3 Bottle Package" 
+                className="w-full max-w-[120px] h-auto"
+              />
             </div>
 
             <h4 className="text-lg font-black mb-1">BLUEDROPS</h4>
@@ -132,24 +130,22 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
         {/* 1 Bottle Package */}
         <div className="bg-blue-500 rounded-2xl p-4 text-white shadow-lg">
           <div className="text-center">
-            {/* 1 Bottle Visual */}
+            {/* 2 Bottles Image */}
             <div className="flex justify-center mb-3">
-              <div className="relative">
-                <div className="w-6 h-9 bg-gradient-to-b from-orange-400 to-orange-600 rounded-t-full rounded-b-lg border border-orange-300"></div>
-                <div className="absolute top-0 w-6 h-2 bg-black rounded-full"></div>
-                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-6 bg-white rounded-lg flex items-center justify-center">
-                  <div className="text-blue-600 text-[5px] font-bold leading-none">Blue<br/>Drops</div>
-                </div>
-              </div>
+              <img 
+                src={twoBottlesImage} 
+                alt="BlueDrops 2 Bottle Package" 
+                className="w-full max-w-[120px] h-auto"
+              />
             </div>
 
             <h4 className="text-lg font-black mb-1">BLUEDROPS</h4>
-            <p className="text-white text-xs font-medium mb-2">1 BOTTLE PACKAGE</p>
+            <p className="text-white text-xs font-medium mb-2">2 BOTTLE PACKAGE</p>
             
             <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $309</p>
             
             <Button
-              onClick={() => handlePurchaseClick("1-bottle")}
+              onClick={() => handlePurchaseClick("2-bottle")}
               className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 text-sm rounded-lg mb-2"
             >
               BUY NOW
