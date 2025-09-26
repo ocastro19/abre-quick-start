@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import VideoSection from "@/components/VideoSection";
 import HeroSection from "@/components/HeroSection";
 import ProductSection from "@/components/ProductSection";
 import DoctorsSection from "@/components/DoctorsSection";
@@ -168,7 +169,12 @@ const Index = () => {
       )}
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-6 sm:py-8 max-w-full">
-        {/* Header Section - Video removed, now starts with Hero */}
+        {/* Video Section */}
+        <VideoSection
+          isVideoLoaded={isVideoLoaded}
+          isVideoError={isVideoError}
+          onRetry={handleVideoRetry}
+        />
 
         {/* Content that shows after video or in admin mode */}
         {(showContent || isAdminMode || isBoltMode) && (
