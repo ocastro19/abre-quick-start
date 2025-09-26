@@ -50,18 +50,14 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
           
           <p className="text-yellow-400 text-lg font-bold mb-4">YOU'RE SAVING $300</p>
           
-          <div className="relative group mb-3" id="six-bottle-package">
-            <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity duration-300 animate-pulse"></div>
-            <Button
-              onClick={() => handlePurchaseClick("6-bottle")}
-              className="relative w-full bg-gradient-to-r from-yellow-500 via-orange-600 to-red-600 hover:from-yellow-600 hover:via-orange-700 hover:to-red-700 text-white font-black text-lg py-4 px-6 rounded-2xl shadow-2xl transform transition-all duration-200 hover:scale-105 active:scale-95 border-2 border-yellow-300"
-            >
-              <div className="flex flex-col items-center">
-                <span className="text-xl">🔥 CLAIM OFFER NOW 🔥</span>
-                <span className="text-sm font-medium opacity-90">Limited Time Only</span>
-              </div>
-            </Button>
-          </div>
+          <Button
+            onClick={() => handlePurchaseClick("6-bottle")}
+            variant="cta-warning"
+            className="mb-3 min-h-[60px] text-base"
+            id="six-bottle-package"
+          >
+            CLAIM OFFER NOW
+          </Button>
 
           <p className="text-white text-sm mb-4">only $49 per bottle, $294 total</p>
 
@@ -108,15 +104,13 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             
             <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $398</p>
             
-            <div className="relative group mb-2">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl blur opacity-40 group-hover:opacity-70 transition-opacity duration-200"></div>
-              <Button
-                onClick={() => handlePurchaseClick("3-bottle")}
-                className="relative w-full bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white font-bold text-sm py-3 rounded-xl shadow-lg transform transition-all duration-150 hover:scale-105 active:scale-95"
-              >
-                BUY NOW
-              </Button>
-            </div>
+            <Button
+              onClick={() => handlePurchaseClick("3-bottle")}
+              variant="cta-warning"
+              className="mb-2 min-h-[50px] text-sm"
+            >
+              BUY NOW
+            </Button>
 
             <p className="text-white text-xs mb-3">$66 per bottle, $198 total</p>
 
@@ -155,15 +149,13 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             
             <p className="text-yellow-400 text-sm font-bold mb-3">SAVE $200</p>
             
-            <div className="relative group mb-2">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl blur opacity-40 group-hover:opacity-70 transition-opacity duration-200"></div>
-              <Button
-                onClick={() => handlePurchaseClick("2-bottle")}
-                className="relative w-full bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white font-bold text-sm py-3 rounded-xl shadow-lg transform transition-all duration-150 hover:scale-105 active:scale-95"
-              >
-                BUY NOW
-              </Button>
-            </div>
+            <Button
+              onClick={() => handlePurchaseClick("2-bottle")}
+              variant="cta-warning"
+              className="mb-2 min-h-[50px] text-sm"
+            >
+              BUY NOW
+            </Button>
 
             <p className="text-white text-xs mb-3">$69 per bottle, $138 total</p>
 
