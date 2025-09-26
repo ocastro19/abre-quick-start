@@ -6,25 +6,28 @@ const NewsCarousel = () => {
 
   const newsArticles = [
     {
-      outlet: "WebMD",
-      logo: "🏥",
-      title: "Natural Male Enhancement Trends for 2025",
-      preview: "WebMD highlights studies on natural ingredients that can help improve male sexual health and performance...",
-      ctaText: "Read Full Article"
-    },
-    {
       outlet: "CNN Health",
       logo: "📺", 
       title: "A Surprising Natural Solution to Men's Performance Issues",
-      preview: "CNN reveals the growing demand for natural solutions among men over 40. Products like BlueDrops are gaining ground as alternatives to traditional treatments...",
-      ctaText: "Read Full Article"
+      preview: "CNN reveals the growing demand for natural solutions among men over 40. Products like EagleBoost are gaining ground as alternatives to traditional treatments.",
+      ctaText: "Read Full Article",
+      image: "/src/assets/cnn-news-article.jpg"
     },
     {
-      outlet: "TIME Health",
-      logo: "📰",
-      title: "Natural Support for Men's Health and Confidence",
-      preview: "TIME explores the benefits and limitations of natural supplements like BlueDrops that may help improve men's overall wellness...",
-      ctaText: "Read Full Article"
+      outlet: "WebMD",
+      logo: "🏥",
+      title: "Natural Male Enhancers Gaining Ground in 2025",
+      preview: "WebMD highlights studies on the use of simple ingredients to improve male sexual health and performance naturally.",
+      ctaText: "Read Full Article",
+      image: "/src/assets/webmd-news-article.jpg"
+    },
+    {
+      outlet: "Mayo Clinic",
+      logo: "🏥",
+      title: "The Science Behind Herbal Support for Men's Vitality",
+      preview: "Mayo Clinic explores the benefits and limitations of natural approaches, suggesting products like EagleBoost may complement traditional treatment.",
+      ctaText: "Read Full Article",
+      image: "/src/assets/mayo-clinic-news-article.jpg"
     }
   ];
 
