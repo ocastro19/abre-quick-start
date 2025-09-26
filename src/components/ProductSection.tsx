@@ -94,7 +94,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
               <img 
                 src={threeBottlesImage} 
                 alt="BlueDrops 3 Bottle Package" 
-                className="w-full max-w-[120px] h-auto"
+                className="w-full max-w-[180px] h-auto"
               />
             </div>
 
@@ -135,7 +135,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
               <img 
                 src={twoBottlesImage} 
                 alt="BlueDrops 2 Bottle Package" 
-                className="w-full max-w-[120px] h-auto"
+                className="w-full max-w-[180px] h-auto"
               />
             </div>
 
