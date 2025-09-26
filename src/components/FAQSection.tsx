@@ -45,38 +45,37 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-900 to-blue-800">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-8 px-4 bg-white">
+      <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div className="mb-8">
-          <div className="bg-gradient-to-r from-red-600 to-orange-500 rounded-t-2xl px-8 py-6">
-            <h2 className="text-3xl font-bold text-white text-center">
-              Frequently Asked Questions
-            </h2>
-          </div>
+        <div className="text-center mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+            Frequently Asked Questions
+          </h2>
+          <div className="w-16 h-1 bg-red-600 mx-auto rounded-full"></div>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="bg-blue-800/50 backdrop-blur-sm rounded-b-2xl border border-blue-700/50 overflow-hidden">
+        <div className="space-y-3">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border-b border-blue-700/30 last:border-b-0"
+                className="border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
               >
-                <AccordionTrigger className="px-8 py-6 text-left text-white hover:no-underline hover:bg-blue-700/30 transition-all duration-300">
-                  <span className="text-lg font-semibold pr-4">
+                <AccordionTrigger className="px-4 py-4 text-left hover:no-underline group">
+                  <span className="text-base md:text-lg font-semibold text-gray-900 pr-4 group-hover:text-blue-600 transition-colors">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="px-8 pb-6 pt-2">
-                  <div className="space-y-4">
-                    <p className="text-blue-100 leading-relaxed text-base">
+                <AccordionContent className="px-4 pb-4 pt-0">
+                  <div className="space-y-3">
+                    <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                       {faq.answer}
                     </p>
                     <div className="inline-block">
-                      <span className="bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-full text-sm font-bold inline-flex items-center gap-2">
+                      <span className="bg-red-600 text-white px-3 py-1.5 rounded-full text-xs md:text-sm font-bold inline-flex items-center gap-2">
                         <span className="text-green-300">✓</span>
                         {faq.badge}
                       </span>
