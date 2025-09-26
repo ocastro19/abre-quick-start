@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import bottlesImage from "@/assets/bottles-offer.jpg";
+import paymentCardsImage from "@/assets/payment-cards.jpg";
 
 interface ProductSectionProps {
   showPurchaseButton: boolean;
@@ -32,17 +34,13 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
         </div>
 
         <div className="text-center pt-4">
-          {/* 6 Bottles Visual */}
-          <div className="flex justify-center gap-1 mb-4">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="relative">
-                <div className="w-8 h-12 bg-gradient-to-b from-orange-400 to-orange-600 rounded-t-full rounded-b-lg border border-orange-300"></div>
-                <div className="absolute top-0 w-8 h-3 bg-black rounded-full"></div>
-                <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-6 h-8 bg-white rounded-lg flex items-center justify-center">
-                  <div className="text-blue-600 text-[6px] font-bold leading-none">Blue<br/>Drops</div>
-                </div>
-              </div>
-            ))}
+          {/* Bottles Image */}
+          <div className="flex justify-center mb-4">
+            <img 
+              src={bottlesImage} 
+              alt="BlueDrops 6 Bottle Package" 
+              className="max-w-[200px] h-auto"
+            />
           </div>
 
           <h3 className="text-2xl font-black mb-1">BLUEDROPS</h3>
@@ -75,14 +73,11 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
 
           {/* Payment Methods */}
           <div className="bg-white rounded-lg p-3">
-            <div className="flex justify-center items-center gap-2 text-xs">
-              <span className="bg-blue-600 text-white px-2 py-1 rounded">VISA</span>
-              <span className="bg-red-500 text-white px-2 py-1 rounded">MC</span>
-              <span className="bg-orange-500 text-white px-2 py-1 rounded">DISC</span>
-              <span className="bg-blue-400 text-white px-2 py-1 rounded">AMEX</span>
-              <span className="bg-blue-700 text-white px-2 py-1 rounded">PP</span>
-              <span className="bg-purple-600 text-white px-2 py-1 rounded">DC</span>
-            </div>
+            <img 
+              src={paymentCardsImage} 
+              alt="Accepted Payment Methods" 
+              className="w-full h-auto max-w-[250px] mx-auto"
+            />
           </div>
         </div>
       </div>
