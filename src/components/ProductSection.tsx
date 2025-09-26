@@ -27,7 +27,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
   return (
     <div className="w-full max-w-sm mx-auto px-4 mt-4 space-y-4">
       {/* Main Package - 6 Bottles */}
-      <div className="relative bg-blue-500 rounded-3xl p-6 text-white shadow-xl">
+      <div className="relative bg-blue-500 rounded-3xl px-8 py-6 text-white shadow-xl">
         {/* Best Value Badge */}
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <div className="bg-yellow-500 text-black px-4 py-1 rounded-full text-xs font-bold">
