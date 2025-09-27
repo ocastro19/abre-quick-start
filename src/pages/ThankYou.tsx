@@ -3,11 +3,6 @@ import { Check, Heart, Star } from "lucide-react";
 
 const ThankYou = () => {
   useEffect(() => {
-    // Hotjar tracking for thank you page
-    if (typeof window !== 'undefined' && window.hj) {
-      window.hj('event', 'purchase_completed');
-    }
-
     // Scroll to top
     window.scrollTo(0, 0);
   }, []);
@@ -79,11 +74,11 @@ const ThankYou = () => {
           <div className="bg-green-50 rounded-xl p-6">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Star className="w-5 h-5 text-yellow-500 fill-current" />
-              <span className="font-bold text-green-800">180-Day Money-Back Guarantee</span>
+              <span className="font-bold text-green-800">60-Day Money-Back Guarantee</span>
               <Star className="w-5 h-5 text-yellow-500 fill-current" />
             </div>
             <p className="text-green-700 text-sm">
-              We're so confident in EagleBoost that if you're not completely satisfied within 180 days, 
+              We're so confident in EagleBoost that if you're not completely satisfied within 60 days, 
               we'll refund every penny. No questions asked.
             </p>
           </div>
@@ -100,7 +95,7 @@ const ThankYou = () => {
               📧 Email: support@eagleboost.com
             </p>
             <p className="text-blue-600">
-              📞 Phone: 1-800-BLUE-DROPS
+              📞 Phone: 1-800-EAGLE-BOOST
             </p>
             <p className="text-blue-600">
               🕒 Hours: Mon-Fri 9AM-6PM EST

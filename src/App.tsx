@@ -3,7 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
 
 // Import all pages
 import Index from "./pages/Index";
@@ -20,32 +19,14 @@ import Upig6bt from "./pages/Upig6bt";
 import Dws1 from "./pages/Dws1";
 import Dws2 from "./pages/Dws2";
 import Dw3 from "./pages/Dw3";
+import CnnArticle from "./pages/CnnArticle";
+import WebmdArticle from "./pages/WebmdArticle";
+import MayoArticle from "./pages/MayoArticle";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  useEffect(() => {
-    // Initialize global tracking functions for EagleBoost
-    const initializeTracking = () => {
-      // Hotjar tracking initialization (when needed)
-      if (window.location.pathname === '/ftr' || window.location.pathname === '/thankyou') {
-        if (!window.hj) {
-          (function(h: any, o: any, t: any, j: any, a: any, r: any) {
-            h.hj = h.hj || function() { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 6457423, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); 
-            r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-          })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=', document.getElementsByTagName('head')[0], document.createElement('script'));
-        }
-      }
-    };
-
-    initializeTracking();
-  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -68,6 +49,9 @@ const App = () => {
             <Route path="/dws1" element={<Dws1 />} />
             <Route path="/dws2" element={<Dws2 />} />
             <Route path="/dw3" element={<Dw3 />} />
+            <Route path="/cnn-article" element={<CnnArticle />} />
+            <Route path="/webmd-article" element={<WebmdArticle />} />
+            <Route path="/mayo-article" element={<MayoArticle />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,15 +1,8 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Dws2 = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.hj) {
-      window.hj('event', 'downsell_2_viewed');
-    }
-  }, []);
 
   const handleAccept = () => {
     // TODO: Replace with your checkout URL

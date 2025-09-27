@@ -47,7 +47,7 @@ const Index = () => {
       const videoContainer = document.getElementById("vid_689e7c030f018d362b0e239d");
       if (videoContainer) {
         const video = videoContainer.querySelector("video") || videoContainer.querySelector("iframe") || videoContainer.querySelector("[data-vturb-player]") || (window as any).vslVideoLoaded;
-        console.log("🔍 Checking video load status:", video ? "LOADED" : "NOT LOADED");
+
         if (video && !hasTrackedPlay) {
           setIsVideoLoaded(true);
           setIsVideoError(false);
@@ -61,22 +61,22 @@ const Index = () => {
       timeout = setTimeout(() => {
         clearInterval(interval);
         if (!isVideoLoaded) {
-          console.log("⚠️ Video loading timeout reached - showing error state");
+
           setIsVideoError(true);
           setIsVideoLoaded(false);
         }
       }, 15000); // 15 second timeout
 
-      console.log("🎬 Starting video load check...");
+
     } catch (error) {
-      console.error("Error setting up video load check:", error);
+      // Error setting up video load check
     }
     return () => {
       try {
         clearInterval(interval);
         clearTimeout(timeout);
       } catch (error) {
-        console.error("Error cleaning up video load check:", error);
+        // Error cleaning up video load check
       }
     };
   }, [isVideoLoaded, retryCount]);
@@ -96,7 +96,7 @@ const Index = () => {
     setIsVideoError(false);
   };
   const handleSecondaryPackageClick = (packageType: string) => {
-    console.log("🎯 Secondary package clicked:", packageType, "- Opening upsell popup");
+
     setSelectedPackage(packageType);
     if (packageType === "1-bottle") {
       setShowOneBottleUpsellPopup(true);
@@ -105,12 +105,12 @@ const Index = () => {
     }
   };
   const handleUpsellAccept = () => {
-    console.log("✅ Upsell accepted - redirecting to 6-bottle package");
+
     handlePurchase("6-bottle");
     setShowUpsellPopup(false);
   };
   const handleUpsellRefuse = () => {
-    console.log("❌ Upsell refused - redirecting to original selection:", selectedPackage);
+
     if (selectedPackage) {
       handlePurchase(selectedPackage);
     }
@@ -118,14 +118,16 @@ const Index = () => {
   };
 
   const handleOneBottleUpsellAccept = () => {
-    console.log("✅ One bottle upsell accepted - redirecting to 6-bottle package");
-    window.location.href = "https://pay.geteagleboost.com/checkout/194466853:1";
+
+    // TODO: Add your payment link here
+    alert("Redirecting to 6-bottle package payment...");
     setShowOneBottleUpsellPopup(false);
   };
 
   const handleOneBottleUpsellRefuse = () => {
-    console.log("❌ One bottle upsell refused - redirecting to 1-bottle package");
-    window.location.href = "https://pay.geteagleboost.com/checkout/194464511:1";
+
+    // TODO: Add your payment link here
+    alert("Redirecting to 1-bottle package payment...");
     setShowOneBottleUpsellPopup(false);
   };
   const handlePurchase = (packageType: string) => {
@@ -135,15 +137,18 @@ const Index = () => {
       return;
     }
     
+    // TODO: Replace with your payment URLs
     const urls = {
-      "1-bottle": "https://pay.geteagleboost.com/checkout/194464511:1",
-      "3-bottle": "https://pay.geteagleboost.com/checkout/194466268:1",
-      "6-bottle": "https://pay.geteagleboost.com/checkout/194466853:1"
+      "1-bottle": "#", // Add your 1-bottle payment link
+      "3-bottle": "#", // Add your 3-bottle payment link
+      "6-bottle": "#"  // Add your 6-bottle payment link
     };
     const url = urls[packageType as keyof typeof urls];
-    if (url) {
-      console.log("🎯 Purchase URL:", url);
+    if (url && url !== "#") {
+
       window.location.href = url;
+    } else {
+      alert(`Redirecting to ${packageType} package payment...`);
     }
   };
   const getUpsellSavings = (packageType: string) => {
@@ -164,7 +169,7 @@ const Index = () => {
 
         {/* Content that shows after video or in admin mode */}
         {(showContent || isAdminMode || isBoltMode) && <>
-            {/* 1. Baking Soda Hero */}
+            {/* 1. EagleBoost Hero */}
             <div className="mb-6 sm:mb-8 lg:mb-10">
               <HeroSection />
             </div>

@@ -1,20 +1,13 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Up1bt = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Track upsell page visit
-    if (typeof window !== 'undefined' && window.hj) {
-      window.hj('event', 'upsell_1bottle_viewed');
-    }
-  }, []);
-
   const handleAccept = () => {
-    // Redirect to 1-bottle purchase
-    window.location.href = "https://pay.geteagleboost.com/checkout/194464511:1";
+    // TODO: Add your payment link here
+    alert("Redirecting to 1-bottle purchase...");
+    // window.location.href = "YOUR_PAYMENT_LINK_HERE";
   };
 
   const handleDecline = () => {

@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const NewsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const newsArticles = [
     {
@@ -10,21 +12,24 @@ const NewsCarousel = () => {
       logo: "/images/cnn-logo.png",
       title: "A Surprising Natural Solution to Men's Performance Issues",
       preview: "CNN reveals the growing demand for natural solutions among men over 40. Products like EagleBoost are gaining ground as alternatives to traditional treatments.",
-      ctaText: "Read Full Article"
+      ctaText: "Read Full Article",
+      route: "/cnn-article"
     },
     {
       outlet: "WebMD",
       logo: "/images/webmd-logo.png",
       title: "Natural Male Enhancers Gaining Ground in 2025",
       preview: "WebMD highlights studies on the use of simple ingredients to improve male sexual health and performance naturally.",
-      ctaText: "Read Full Article"
+      ctaText: "Read Full Article",
+      route: "/webmd-article"
     },
     {
       outlet: "Mayo Clinic",
       logo: "/images/mayo-clinic-logo.png",
       title: "The Science Behind Herbal Support for Men's Vitality",
       preview: "Mayo Clinic explores the benefits and limitations of natural approaches, suggesting products like EagleBoost may complement traditional treatment.",
-      ctaText: "Read Full Article"
+      ctaText: "Read Full Article",
+      route: "/mayo-article"
     }
   ];
 
@@ -135,11 +140,8 @@ const NewsCarousel = () => {
                       className="relative w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 text-base min-h-[60px] shadow-xl"
                       onClick={(e) => {
                         e.stopPropagation();
-                        // Navigate to article or scroll to purchase section
-                        const targetElement = document.getElementById("six-bottle-package");
-                        if (targetElement) {
-                          targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
-                        }
+                        // Navigate to the specific article page
+                        navigate(article.route);
                       }}
                     >
                       <div className="flex items-center justify-center gap-2">

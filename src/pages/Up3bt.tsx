@@ -1,15 +1,8 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Up3bt = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.hj) {
-      window.hj('event', 'upsell_3bottle_viewed');
-    }
-  }, []);
 
   const handleAccept = () => {
     // TODO: Replace with your checkout URL

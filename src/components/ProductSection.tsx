@@ -27,7 +27,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
 
   return (
     <div className="w-full max-w-sm mx-auto px-2 sm:px-3 mt-3 space-y-4 pb-4 sm:pb-6">
-      {/* Main Package - 6 Bottles - BLUEDROPS Design Replica */}
+      {/* Main Package - 6 Bottles - EAGLEBOOST Design Replica */}
       <div className="relative bg-gradient-to-b from-blue-600 via-blue-700 to-blue-800 rounded-2xl px-5 sm:px-6 py-4 sm:py-5 text-white shadow-2xl border-2 border-blue-400">
         {/* Best Value Badge - Orange Gradient */}
         <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2 z-30">
@@ -46,7 +46,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             />
           </div>
 
-          {/* Product Name - Large and Bold like BLUEDROPS */}
+          {/* Product Name - Large and Bold like EAGLEBOOST */}
           <h2 className="text-4xl font-black leading-tight mb-1 sm:mb-2">
             <span className="text-white">EAGLEBOOST</span>
           </h2>
@@ -94,9 +94,9 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
         </div>
       </div>
 
-      {/* Secondary Packages - Vertical Layout like BLUEDROPS Reference */}
+      {/* Secondary Packages - Vertical Layout like EAGLEBOOST Reference */}
       <div className="grid grid-cols-2 gap-2 sm:gap-4">
-        {/* 3 Bottle Package - BLUEDROPS Design Replica */}
+        {/* 3 Bottle Package - EAGLEBOOST Design Replica */}
         <div className="bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600 rounded-2xl px-1 sm:px-2 py-3 sm:py-3 text-white shadow-xl text-center">
           {/* Product Image - Top */}
           <div className="flex justify-center mb-3">
@@ -146,7 +146,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
           </div>
         </div>
 
-        {/* 2 Bottle Package - BLUEDROPS Design Replica */}
+        {/* 2 Bottle Package - EAGLEBOOST Design Replica */}
         <div className="bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600 rounded-2xl px-1 sm:px-2 py-3 sm:py-3 text-white shadow-xl text-center">
           {/* Product Image - Top */}
           <div className="flex justify-center mb-3">
