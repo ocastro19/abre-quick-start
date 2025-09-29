@@ -65,21 +65,15 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
           </div>
         )}
 
-        {/* Error State */}
+        {/* Error State - Now with VTurb Embed */}
         {isVideoError && (
           <div className="absolute inset-0 flex items-center justify-center z-10 bg-black">
-            <div className="text-center text-white p-6">
-              <p className="text-sm mb-2">Vídeo temporariamente</p>
-              <p className="text-sm mb-2">indisponível</p>
-              <p className="text-sm mb-4">verifique seu painel</p>
-              <Button 
-                onClick={onRetry}
-                className="bg-white text-black text-xs px-4 py-2"
-              >
-                <RefreshCcw className="w-3 h-3 mr-1" />
-                Retry
-              </Button>
-            </div>
+            <div 
+              className="w-full h-full"
+              dangerouslySetInnerHTML={{
+                __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`
+              }}
+            />
           </div>
         )}
       </div>
