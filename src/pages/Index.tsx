@@ -47,7 +47,6 @@ const Index = () => {
       const videoContainer = document.getElementById("vid_689e7c030f018d362b0e239d");
       if (videoContainer) {
         const video = videoContainer.querySelector("video") || videoContainer.querySelector("iframe") || videoContainer.querySelector("[data-vturb-player]") || (window as any).vslVideoLoaded;
-
         if (video && !hasTrackedPlay) {
           setIsVideoLoaded(true);
           setIsVideoError(false);
@@ -61,13 +60,10 @@ const Index = () => {
       timeout = setTimeout(() => {
         clearInterval(interval);
         if (!isVideoLoaded) {
-
           setIsVideoError(true);
           setIsVideoLoaded(false);
         }
       }, 15000); // 15 second timeout
-
-
     } catch (error) {
       // Error setting up video load check
     }
@@ -96,7 +92,6 @@ const Index = () => {
     setIsVideoError(false);
   };
   const handleSecondaryPackageClick = (packageType: string) => {
-
     setSelectedPackage(packageType);
     if (packageType === "1-bottle") {
       setShowOneBottleUpsellPopup(true);
@@ -105,27 +100,21 @@ const Index = () => {
     }
   };
   const handleUpsellAccept = () => {
-
     handlePurchase("6-bottle");
     setShowUpsellPopup(false);
   };
   const handleUpsellRefuse = () => {
-
     if (selectedPackage) {
       handlePurchase(selectedPackage);
     }
     setShowUpsellPopup(false);
   };
-
   const handleOneBottleUpsellAccept = () => {
-
     // TODO: Add your payment link here
     alert("Redirecting to 6-bottle package payment...");
     setShowOneBottleUpsellPopup(false);
   };
-
   const handleOneBottleUpsellRefuse = () => {
-
     // TODO: Add your payment link here
     alert("Redirecting to 1-bottle package payment...");
     setShowOneBottleUpsellPopup(false);
@@ -136,16 +125,17 @@ const Index = () => {
       handleSecondaryPackageClick("1-bottle");
       return;
     }
-    
+
     // TODO: Replace with your payment URLs
     const urls = {
-      "1-bottle": "#", // Add your 1-bottle payment link
-      "3-bottle": "#", // Add your 3-bottle payment link
-      "6-bottle": "#"  // Add your 6-bottle payment link
+      "1-bottle": "#",
+      // Add your 1-bottle payment link
+      "3-bottle": "#",
+      // Add your 3-bottle payment link
+      "6-bottle": "#" // Add your 6-bottle payment link
     };
     const url = urls[packageType as keyof typeof urls];
     if (url && url !== "#") {
-
       window.location.href = url;
     } else {
       alert(`Redirecting to ${packageType} package payment...`);
@@ -233,14 +223,10 @@ const Index = () => {
       <UpsellModal showUpsellPopup={showUpsellPopup} selectedPackage={selectedPackage} onCloseUpsellPopup={() => setShowUpsellPopup(false)} onUpsellAccept={handleUpsellAccept} onUpsellRefuse={handleUpsellRefuse} getUpsellSavings={getUpsellSavings} />
       
       {/* Upsell Modal for 1-bottle */}
-      {showOneBottleUpsellPopup && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      {showOneBottleUpsellPopup && <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-md w-full p-6 relative animate-scale-in">
             {/* Close Button */}
-            <button
-              onClick={() => setShowOneBottleUpsellPopup(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
-            >
+            <button onClick={() => setShowOneBottleUpsellPopup(false)} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
               <X className="w-6 h-6" />
             </button>
 
@@ -276,7 +262,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✅</span>
-                  <span className="text-sm text-gray-700">Best price per bottle ($49 vs $69)</span>
+                  <span className="text-sm text-gray-700">Best price per bottle ($49 vs $79)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✅</span>
@@ -290,17 +276,11 @@ const Index = () => {
 
               {/* Action Buttons */}
               <div className="space-y-3">
-                <button
-                  onClick={handleOneBottleUpsellAccept}
-                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 rounded-xl transform hover:scale-105 transition-all duration-300"
-                >
+                <button onClick={handleOneBottleUpsellAccept} className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 rounded-xl transform hover:scale-105 transition-all duration-300">
                   🚀 Yes, Upgrade to 6 Bottles & Save $240!
                 </button>
                 
-                <button
-                  onClick={handleOneBottleUpsellRefuse}
-                  className="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-xl transition-colors"
-                >
+                <button onClick={handleOneBottleUpsellRefuse} className="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-xl transition-colors">
                   No thanks, continue with 2 bottle
                 </button>
               </div>
@@ -310,8 +290,7 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
     </div>;
 };
 export default Index;
