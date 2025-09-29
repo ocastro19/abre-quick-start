@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { RefreshCcw } from "lucide-react";
+import { RefreshCcw, Play } from "lucide-react";
+import VSLModal from "./VSLModal";
 
 interface VideoSectionProps {
   isVideoLoaded: boolean;
@@ -8,10 +10,10 @@ interface VideoSectionProps {
 }
 
 const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProps) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="w-full max-w-sm mx-auto px-4 pb-8">
-
-
       {/* Red Banner */}
       <div className="bg-red-500 text-white text-center py-1 px-3 rounded-md mb-6">
         <p className="text-sm font-bold">THEY DON'T WANT YOU TO KNOW THIS 👇</p>
@@ -40,8 +42,12 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
         </p>
       </div>
 
-      {/* Video Container */}
-      <div className="relative w-full bg-black rounded-3xl overflow-hidden shadow-xl mb-4" style={{ aspectRatio: "9/16" }}>
+      {/* Video Container - Now clickable to open modal */}
+      <div 
+        className="relative w-full bg-black rounded-3xl overflow-hidden shadow-xl mb-4 cursor-pointer group"
+        style={{ aspectRatio: "9/16" }}
+        onClick={() => setIsModalOpen(true)}
+      >
         {/* Loading State */}
         {!isVideoLoaded && !isVideoError && (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -60,7 +66,10 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
               <p className="text-sm mb-2">indisponível</p>
               <p className="text-sm mb-4">verifique seu painel</p>
               <Button 
-                onClick={onRetry}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onRetry();
+                }}
                 className="bg-white text-black text-xs px-4 py-2"
               >
                 <RefreshCcw className="w-3 h-3 mr-1" />
@@ -70,20 +79,20 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
           </div>
         )}
 
-        {/* VTurb Smartplayer Embed */}
-        <div 
-          id="vid_689e7c030f018d362b0e239d" 
-          className="w-full h-full"
-          style={{ 
-            position: "relative",
-            width: "100%",
-            height: "100%",
-            background: "#000"
-          }}
-          dangerouslySetInnerHTML={{
-            __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`
-          }}
-        />
+        {/* Play Button Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+          <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <Play className="w-8 h-8 text-white ml-1" />
+          </div>
+        </div>
+
+        {/* Placeholder thumbnail */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-white text-center">
+            <p className="text-lg font-bold mb-2">Celtic Salt Trick</p>
+            <p className="text-sm opacity-80">Click to watch video</p>
+          </div>
+        </div>
       </div>
 
       {/* Audio Notice */}
@@ -109,6 +118,9 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
           </p>
         </div>
       </div>
+
+      {/* VSL Modal */}
+      <VSLModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };
