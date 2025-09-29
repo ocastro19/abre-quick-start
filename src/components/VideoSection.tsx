@@ -70,7 +70,7 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
           </div>
         )}
 
-        {/* Video Embed Container */}
+        {/* VTurb Smartplayer Embed */}
         <div 
           id="vid_689e7c030f018d362b0e239d" 
           className="w-full h-full"
@@ -80,16 +80,10 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
             height: "100%",
             background: "#000"
           }}
-        >
-          {/* Placeholder content */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-white text-center">
-              <p className="text-sm mb-2">Vídeo temporariamente</p>
-              <p className="text-sm mb-2">indisponível</p>
-              <p className="text-sm">verifique seu painel</p>
-            </div>
-          </div>
-        </div>
+          dangerouslySetInnerHTML={{
+            __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`
+          }}
+        />
       </div>
 
       {/* Audio Notice */}
