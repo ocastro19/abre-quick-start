@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, User, Calendar, Clock, Shield, Facebook, Twitter, Linkedin, Mail, X } from 'lucide-react';
+import mayoNewsImage from "@/assets/mayo-clinic-news-article.png";
 
 const MayoArticle: React.FC = () => {
   const navigate = useNavigate();
@@ -136,11 +137,8 @@ const MayoArticle: React.FC = () => {
             {/* Hero Image */}
             <div className="mb-8">
               <img 
-                src="https://i.imgur.com/W1KksXv.png"
-                onError={(e) => {
-                  e.currentTarget.src = "https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=medical%20consultation%20doctor%20patient%20discussion%20mens%20health%20clinical%20setting%20professional%20healthcare&image_size=landscape_16_9";
-                }}
-                alt="Medical consultation about men's health and natural enhancement" 
+                src={mayoNewsImage}
+                alt="EagleBoost medical research and natural enhancement" 
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
                 loading="lazy"
               />

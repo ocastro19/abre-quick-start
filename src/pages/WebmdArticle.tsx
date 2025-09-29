@@ -1,5 +1,6 @@
 import { ArrowLeft, Facebook, Twitter, Linkedin, Mail, User, Calendar, Clock, X } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
+import webmdNewsImage from "@/assets/webmd-news-article.png";
 
 const WebmdArticle = () => {
   const navigate = useNavigate();
@@ -100,11 +101,8 @@ const WebmdArticle = () => {
         {/* Hero Image */}
         <div className="mb-8">
           <img 
-            src="https://i.imgur.com/28QcsLD.png"
-            onError={(e) => {
-              e.currentTarget.src = "https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=medical%20research%20laboratory%20natural%20supplements%20bottles%20scientific%20equipment%20professional%20healthcare%20setting&image_size=landscape_16_9";
-            }}
-            alt="Medical research on natural supplements and male enhancement" 
+            src={webmdNewsImage}
+            alt="EagleBoost medical research on natural supplements and male enhancement" 
             className="w-full h-auto rounded-lg shadow-lg object-cover"
             loading="lazy"
           />

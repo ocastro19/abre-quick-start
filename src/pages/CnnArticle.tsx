@@ -1,5 +1,6 @@
 import { ArrowLeft, Facebook, Twitter, Linkedin, Mail, X } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
+import cnnNewsImage from "@/assets/cnn-news-article.png";
 
 const CnnArticle = () => {
   const navigate = useNavigate();
@@ -70,11 +71,8 @@ const CnnArticle = () => {
         {/* Hero Image */}
         <div className="mb-8">
           <img 
-            src="https://i.imgur.com/52TjWpt.png"
-            onError={(e) => {
-              e.currentTarget.src = "https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=natural%20supplements%20pills%20scattered%20on%20wooden%20table%20with%20herbs%20and%20plants%20medical%20research%20concept%20professional%20photography&image_size=landscape_16_9";
-            }}
-            alt="Natural supplements and herbs for men's health" 
+            src={cnnNewsImage}
+            alt="EagleBoost natural supplements for men's health" 
             className="w-full h-auto rounded-lg shadow-lg object-cover"
             loading="lazy"
           />
