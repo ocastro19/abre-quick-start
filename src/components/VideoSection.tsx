@@ -40,9 +40,24 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
 
       {/* Video Container */}
       <div className="relative w-full bg-black rounded-3xl overflow-hidden shadow-xl mb-4" style={{ aspectRatio: "9/16" }}>
+        {/* VTurb Smartplayer Embed - Always visible */}
+        <div 
+          id="vid_689e7c030f018d362b0e239d" 
+          className="w-full h-full"
+          style={{ 
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            background: "#000"
+          }}
+          dangerouslySetInnerHTML={{
+            __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`
+          }}
+        />
+
         {/* Loading State */}
         {!isVideoLoaded && !isVideoError && (
-          <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="absolute inset-0 flex items-center justify-center z-10 bg-black/80">
             <div className="text-center text-white">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-4"></div>
               <p className="text-sm">Loading video...</p>
@@ -52,7 +67,7 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
 
         {/* Error State */}
         {isVideoError && (
-          <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="absolute inset-0 flex items-center justify-center z-10 bg-black">
             <div className="text-center text-white p-6">
               <p className="text-sm mb-2">Vídeo temporariamente</p>
               <p className="text-sm mb-2">indisponível</p>
@@ -67,21 +82,6 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
             </div>
           </div>
         )}
-
-        {/* VTurb Smartplayer Embed */}
-        <div 
-          id="vid_689e7c030f018d362b0e239d" 
-          className="w-full h-full"
-          style={{ 
-            position: "relative",
-            width: "100%",
-            height: "100%",
-            background: "#000"
-          }}
-          dangerouslySetInnerHTML={{
-            __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`
-          }}
-        />
       </div>
 
       {/* Audio Notice */}
