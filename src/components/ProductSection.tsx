@@ -127,7 +127,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
           </Button>
 
           {/* Pricing - Light Gray */}
-          <p className="text-white/90 text-xs font-semibold mb-2 sm:mb-4 whitespace-nowrap">$66 per bottle, $198 total</p>
+          <p className="text-white/90 text-xs font-semibold mb-2 sm:mb-4 whitespace-nowrap">$69 per bottle, $207 total</p>
           
           {/* Trust Badges - Horizontal Layout */}
           <div className="flex justify-center gap-0.5 sm:gap-1 text-xs mb-2 sm:mb-0">
