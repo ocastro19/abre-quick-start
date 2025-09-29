@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Truck, Lock, Clock } from "lucide-react";
-import newBottlesImage from "@/assets/new-bottles-offer.jpg";
+import newBottlesImage from "@/assets/new-bottles-offer.png";
 import paymentCardsImage from "@/assets/payment-cards.jpg";
-import bottlesOffer3 from "@/assets/3-bottles-offer.jpg";
-import bottlesOffer1 from "@/assets/2-bottles-offer.jpg";
+import bottlesOffer3 from "@/assets/3-bottles-offer.png";
+import bottlesOffer1 from "@/assets/2-bottles-offer.png";
 
 interface ProductSectionProps {
   showPurchaseButton: boolean;
