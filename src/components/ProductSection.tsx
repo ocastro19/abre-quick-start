@@ -42,7 +42,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
             <img 
               src={newBottlesImage} 
               alt="EagleBoost 6 Bottle Package" 
-              className="w-full max-w-[200px] sm:max-w-[240px] h-auto drop-shadow-2xl"
+              className="w-full max-w-[280px] sm:max-w-[320px] h-auto drop-shadow-2xl"
             />
           </div>
 
