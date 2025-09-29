@@ -77,6 +77,10 @@ const Index = () => {
     };
   }, [isVideoLoaded, retryCount]);
   useEffect(() => {
+    // Force video error state to show VTurb embed
+    setIsVideoError(true);
+    setIsVideoLoaded(false);
+    
     // Show content after video loads, timeout, or in admin mode
     if (isVideoLoaded || isVideoError || isAdminMode || isBoltMode) {
       const timer = setTimeout(() => {

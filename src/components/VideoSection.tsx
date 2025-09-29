@@ -40,21 +40,6 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
 
       {/* Video Container */}
       <div className="relative w-full bg-black rounded-3xl overflow-hidden shadow-xl mb-4" style={{ aspectRatio: "9/16" }}>
-        {/* VTurb Smartplayer Embed - Always visible */}
-        <div 
-          id="vid_689e7c030f018d362b0e239d" 
-          className="w-full h-full"
-          style={{ 
-            position: "relative",
-            width: "100%",
-            height: "100%",
-            background: "#000"
-          }}
-          dangerouslySetInnerHTML={{
-            __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`
-          }}
-        />
-
         {/* Loading State */}
         {!isVideoLoaded && !isVideoError && (
           <div className="absolute inset-0 flex items-center justify-center z-10 bg-black/80">
@@ -65,7 +50,7 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
           </div>
         )}
 
-        {/* Error State - Now with VTurb Embed */}
+        {/* Error State with VTurb Embed */}
         {isVideoError && (
           <div className="absolute inset-0 flex items-center justify-center z-10 bg-black">
             <div 
@@ -74,6 +59,16 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
                 __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`
               }}
             />
+          </div>
+        )}
+
+        {/* Default placeholder when video is loaded or no error */}
+        {(isVideoLoaded && !isVideoError) && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-white text-center">
+              <p className="text-lg font-bold mb-2">Celtic Salt Trick</p>
+              <p className="text-sm opacity-80">Ready to watch</p>
+            </div>
           </div>
         )}
       </div>
