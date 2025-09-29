@@ -65,7 +65,7 @@ const UpsellModal = ({
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green-500">✅</span>
-              <span className="text-sm text-gray-700">Best price per bottle ($49 vs $79)</span>
+              <span className="text-sm text-gray-700">Best price per bottle ($49 vs $69)</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green-500">✅</span>
