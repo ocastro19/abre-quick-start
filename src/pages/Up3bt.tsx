@@ -5,8 +5,7 @@ const Up3bt = () => {
   const navigate = useNavigate();
 
   const handleAccept = () => {
-    // TODO: Replace with your checkout URL
-    // window.location.href = "your-checkout-url-here";
+    window.location.href = "https://pay.geteagleboost.com/checkout/194466268:1";
   };
 
   const handleDecline = () => {

@@ -5,9 +5,7 @@ const Up1bt = () => {
   const navigate = useNavigate();
 
   const handleAccept = () => {
-    // TODO: Add your payment link here
-    alert("Redirecting to 1-bottle purchase...");
-    // window.location.href = "YOUR_PAYMENT_LINK_HERE";
+    window.location.href = "https://pay.geteagleboost.com/checkout/194464511:1";
   };
 
   const handleDecline = () => {

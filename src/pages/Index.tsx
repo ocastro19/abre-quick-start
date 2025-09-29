@@ -110,13 +110,13 @@ const Index = () => {
     setShowUpsellPopup(false);
   };
   const handleOneBottleUpsellAccept = () => {
-    // TODO: Add your payment link here
-    alert("Redirecting to 6-bottle package payment...");
+    // Redirect to 6-bottle package payment
+    window.location.href = "https://pay.geteagleboost.com/checkout/194466853:1";
     setShowOneBottleUpsellPopup(false);
   };
   const handleOneBottleUpsellRefuse = () => {
-    // TODO: Add your payment link here
-    alert("Redirecting to 1-bottle package payment...");
+    // Redirect to 2-bottle package payment
+    window.location.href = "https://pay.geteagleboost.com/checkout/194464511:1";
     setShowOneBottleUpsellPopup(false);
   };
   const handlePurchase = (packageType: string) => {
@@ -126,13 +126,11 @@ const Index = () => {
       return;
     }
 
-    // TODO: Replace with your payment URLs
+    // Payment URLs
     const urls = {
-      "1-bottle": "#",
-      // Add your 1-bottle payment link
-      "3-bottle": "#",
-      // Add your 3-bottle payment link
-      "6-bottle": "#" // Add your 6-bottle payment link
+      "1-bottle": "https://pay.geteagleboost.com/checkout/194464511:1", // 2 bottles
+      "3-bottle": "https://pay.geteagleboost.com/checkout/194466268:1", // 3 bottles
+      "6-bottle": "https://pay.geteagleboost.com/checkout/194466853:1" // 6 bottles
     };
     const url = urls[packageType as keyof typeof urls];
     if (url && url !== "#") {
