@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===== VTurb System ===== */
+#cta-section {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#cta-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== EagleBoost Design System - Health Supplement Theme ===== */
 @layer base {
   :root {

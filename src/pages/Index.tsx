@@ -155,8 +155,9 @@ const Index = () => {
         {/* Video Section */}
         <VideoSection isVideoLoaded={isVideoLoaded} isVideoError={isVideoError} onRetry={handleVideoRetry} />
 
-        {/* Content that shows after video or in admin mode */}
-        {(showContent || isAdminMode || isBoltMode) && <>
+        {/* Content section with VTurb control */}
+        <div id="cta-section" className="hidden">
+          {(showContent || isAdminMode || isBoltMode) && <>
             {/* 1. EagleBoost Hero */}
             <div className="mb-6 sm:mb-8 lg:mb-10">
               <HeroSection />
@@ -211,10 +212,11 @@ const Index = () => {
             <div className="mb-6 sm:mb-8 lg:mb-10">
               <FAQSection />
             </div>
-
-            {/* 12. Rodapé */}
-            <Footer />
           </>}
+        </div>
+
+        {/* Footer - always visible */}
+        <Footer />
       </div>
 
       {/* Upsell Modal for 3-bottle */}
