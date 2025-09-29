@@ -92,7 +92,7 @@ const ThankYou = () => {
           </p>
           <div className="space-y-2 text-sm">
             <p className="text-blue-600">
-              📧 Email: support@eagleboost.com
+              📧 Email: contact@geteagleboost.com
             </p>
             <p className="text-blue-600">
               📞 Phone: 1-800-EAGLE-BOOST
