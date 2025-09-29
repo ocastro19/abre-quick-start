@@ -38,7 +38,7 @@ const ProductSection = ({ showPurchaseButton, onPurchase, onSecondaryPackageClic
 
         <div className="text-center pt-2 sm:pt-3 px-1">
           {/* Bottles Image */}
-          <div className="flex justify-center mb-3 sm:mb-4">
+          <div className="flex justify-center mb-1 sm:mb-2">
             <img 
               src={newBottlesImage} 
               alt="EagleBoost 6 Bottle Package" 
