@@ -14,7 +14,7 @@ const DoctorsSection = () => {
       image: drMehmetOzImage,
       quote: "EAGLE BOOST represents a breakthrough in natural men's health. Simple ingredients, impressive results.",
       verified: true,
-      videoIframe: `<vturb-smartplayer id="vid-68d84ac00863b1de094f9959" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68d84ac00863b1de094f9959/v4/player.js", s.async=!0,document.head.appendChild(s); </script>`
+      videoIframe: `<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_68d84ac00863b1de094f9959_wrapper" style="margin: 0 auto; width: 100%; "> <div style="position: relative; padding: 74.28571428571429% 0 0 0;" id="ifr_68d84ac00863b1de094f9959_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68d84ac00863b1de094f9959" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68d84ac00863b1de094f9959/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>`
     },
     {
       name: "John Sinner",
@@ -23,7 +23,7 @@ const DoctorsSection = () => {
       image: johnSinnerImage,
       quote: "For me, real performance goes beyond the screen. Eagle Boost has been my secret weapon — helping me overcome ED and stay confident when it matters most.",
       verified: true,
-      videoIframe: `<vturb-smartplayer id="vid-68d84ab0a4bea31e50e74a73" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68d84ab0a4bea31e50e74a73/v4/player.js", s.async=!0,document.head.appendChild(s); </script>`
+      videoIframe: `<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_68d84ab0a4bea31e50e74a73_wrapper" style="margin: 0 auto; width: 100%; "> <div style="position: relative; padding: 56.52777777777778% 0 0 0;" id="ifr_68d84ab0a4bea31e50e74a73_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68d84ab0a4bea31e50e74a73" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68d84ab0a4bea31e50e74a73/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>`
     },
     {
       name: "Dwayne Johnson (The Rock)",
@@ -32,7 +32,7 @@ const DoctorsSection = () => {
       image: dwayneJohnsonImage,
       quote: "It's not just about being strong in the gym. It's about being strong in life. Eagle Boost is the secret weapon for men who want to regain power and confidence.",
       verified: true,
-      videoIframe: `<vturb-smartplayer id="vid-68d84aed232c1a965f3c7c91" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68d84aed232c1a965f3c7c91/v4/player.js", s.async=!0,document.head.appendChild(s); </script>`
+      videoIframe: `<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_68d84aed232c1a965f3c7c91_wrapper" style="margin: 0 auto; width: 100%; "> <div style="position: relative; padding: 56.52777777777778% 0 0 0;" id="ifr_68d84aed232c1a965f3c7c91_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68d84aed232c1a965f3c7c91" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68d84aed232c1a965f3c7c91/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>`
     }
   ];
 
