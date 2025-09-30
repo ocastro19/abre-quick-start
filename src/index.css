@@ -1,8 +1,48 @@
+/* Estilos para o VSL Pitch Listener */
+#cta-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+#cta-section.show {
+  opacity: 1;
+  transform: translateY(0);
+  display: block !important;
+}
+
+/* Remove a classe hidden quando show é aplicada */
+#cta-section.show {
+  display: block !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ===== VTurb System ===== */
+vturb-smartplayer {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+  /* Impede que o player apareça fora do container */
+  contain: layout style paint !important;
+}
+
+/* Garantir que o vídeo não apareça fora do container */
+vturb-smartplayer * {
+  position: relative !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  /* Impede que elementos filhos "vazem" para fora */
+  contain: layout style !important;
+}
+
 #cta-section {
   transition: all 0.5s ease-in-out;
   opacity: 0;

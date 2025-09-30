@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { RefreshCcw } from "lucide-react";
+import { useEffect } from "react";
 
 interface VideoSectionProps {
   isVideoLoaded: boolean;
@@ -8,6 +9,45 @@ interface VideoSectionProps {
 }
 
 const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProps) => {
+  useEffect(() => {
+    // Carrega o script VTurb quando o componente monta
+    const loadVTurbScript = () => {
+      const videoId = "68b44bae6fe4730e992bed14";
+      const scriptId = `vturb-script-${videoId}`;
+      
+      // Remove script anterior se existir
+      const existingScript = document.getElementById(scriptId);
+      if (existingScript) {
+        existingScript.remove();
+      }
+      
+      // Cria novo script
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.type = "text/javascript";
+      script.async = true;
+      script.src = `https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/${videoId}/v4/player.js`;
+      
+      script.onload = () => {
+        console.log("✅ VTurb script carregado com sucesso");
+      };
+      
+      script.onerror = () => {
+        console.error("❌ Erro ao carregar script VTurb");
+      };
+      
+      document.head.appendChild(script);
+      console.log("🎬 Script VTurb injetado:", script.src);
+    };
+
+    // Carrega o script após um pequeno delay para garantir que o DOM está pronto
+    const timer = setTimeout(loadVTurbScript, 100);
+    
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <section className="w-full max-w-sm mx-auto px-4 pb-8">
       {/* Red Banner */}
@@ -40,37 +80,13 @@ const VideoSection = ({ isVideoLoaded, isVideoError, onRetry }: VideoSectionProp
 
       {/* Video Container */}
       <div className="relative w-full bg-black rounded-3xl overflow-hidden shadow-xl mb-4" style={{ aspectRatio: "9/16" }}>
-        {/* Loading State */}
-        {!isVideoLoaded && !isVideoError && (
-          <div className="absolute inset-0 flex items-center justify-center z-10 bg-black/80">
-            <div className="text-center text-white">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-4"></div>
-              <p className="text-sm">Loading video...</p>
-            </div>
-          </div>
-        )}
-
-        {/* Error State with VTurb Embed */}
-        {isVideoError && (
-          <div className="absolute inset-0 flex items-center justify-center z-10 bg-black">
-            <div 
-              className="w-full h-full"
-              dangerouslySetInnerHTML={{
-                __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>`
-              }}
-            />
-          </div>
-        )}
-
-        {/* Default placeholder when video is loaded or no error */}
-        {(isVideoLoaded && !isVideoError) && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-white text-center">
-              <p className="text-lg font-bold mb-2">Celtic Salt Trick</p>
-              <p className="text-sm opacity-80">Ready to watch</p>
-            </div>
-          </div>
-        )}
+        {/* VTurb Smartplayer Embed */}
+        <div 
+          className="w-full h-full flex items-center justify-center relative"
+          dangerouslySetInnerHTML={{
+            __html: `<vturb-smartplayer id="vid-68b44bae6fe4730e992bed14" style="display: block; margin: 0 auto; width: 100%; max-width: 400px; height: 100%; min-height: 300px; position: relative; z-index: 1;"></vturb-smartplayer>`
+          }}
+        />
       </div>
 
       {/* Audio Notice */}

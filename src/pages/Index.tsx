@@ -216,6 +216,36 @@ const Index = () => {
             <div className="mb-6 sm:mb-8 lg:mb-10">
               <FAQSection />
             </div>
+
+            {/* CTA Section - Controlada pelo VSL Pitch Listener */}
+            <div id="cta-section" className="hidden mb-6 sm:mb-8 lg:mb-10">
+              <div className="w-full max-w-lg mx-auto px-4">
+                <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl shadow-xl p-8 text-center text-white">
+                  <h2 className="text-2xl font-bold mb-4">
+                    🔥 Oferta Especial Limitada!
+                  </h2>
+                  <p className="text-lg mb-6">
+                    Aproveite esta oportunidade única para transformar sua vida
+                  </p>
+                  <button 
+                    className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+                    onClick={() => {
+                      const targetElement = document.getElementById("six-bottle-package") || 
+                                          document.querySelector('[data-purchase-section="true"]') || 
+                                          document.querySelector(".purchase-button-main");
+                      if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+                      }
+                    }}
+                  >
+                    Comprar Agora - Oferta Limitada!
+                  </button>
+                  <p className="text-sm mt-4 opacity-90">
+                    ⏰ Esta oferta pode ser removida a qualquer momento
+                  </p>
+                </div>
+              </div>
+            </div>
           </>}
         </div>
 

@@ -2,122 +2,128 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CELTIC SALT TRICK REVEAL</title>
-    <meta name="description" content="EagleBoost - Advanced health supplement for optimal wellness and energy." />
-    <meta name="author" content="EagleBoost" />
-    <parameter name="keywords" content="health, supplement, wellness, energy, nutrition, EagleBoost" />
-
-    <meta property="og:title" content="CELTIC SALT TRICK REVEAL" />
-    <meta property="og:description" content="EagleBoost - Advanced health supplement for optimal wellness and energy." />
+    <title>Celtic Salt Trick - Reverse Impotence in 7 Days</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Discover the Celtic Salt Trick that can reverse impotence in just 7 days. Watch this secret recipe video now!" />
+    <meta name="keywords" content="celtic salt, impotence, erectile dysfunction, natural remedy, men's health" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Celtic Salt Trick - Reverse Impotence in 7 Days" />
+    <meta property="og:description" content="Discover the Celtic Salt Trick that can reverse impotence in just 7 days. Watch this secret recipe video now!" />
     <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Celtic Salt Trick - Reverse Impotence in 7 Days" />
+    <meta name="twitter:description" content="Discover the Celtic Salt Trick that can reverse impotence in just 7 days. Watch this secret recipe video now!" />
+    
+    <!-- Hotjar ou clarity Tracking Code -->
+    
 
     <!-- VSL Pitch Listener (corrigido para aguardar React) -->
     <script>
-    (function () {
-      console.log('[VTurb] Script iniciado');
-      
-      let cta = null;
-      let isShown = false;
-      
-      // Função que procura o elemento #cta-section
-      const findCTAElement = () => {
-        if (!cta) {
-          cta = document.getElementById('cta-section');
-          if (cta) {
-            console.log('[VTurb] Elemento #cta-section encontrado!');
-          } else {
-            console.log('[VTurb] Elemento #cta-section ainda não encontrado, tentando novamente...');
-          }
-        }
-        return cta;
-      };
-    
-      // Função que mostra a CTA
-      const show = () => {
-        console.log('[VTurb] Função show() chamada');
+      (function () {
+        console.log('[VTurb] Script iniciado');
         
-        if (isShown) {
-          console.log('[VTurb] CTA já está sendo exibida');
-          return;
-        }
+        let cta = null;
+        let isShown = false;
         
-        const ctaElement = findCTAElement();
-        if (!ctaElement) {
-          console.log('[VTurb] Elemento #cta-section não encontrado, tentando novamente em 500ms');
-          setTimeout(show, 500);
-          return;
-        }
-        
-        console.log('[VTurb] Mostrando CTA section');
-        ctaElement.classList.add('show');
-        isShown = true;
-        
-        try { 
-          sessionStorage.setItem('vturb_pitch_seen','1');
-          console.log('[VTurb] Estado salvo no sessionStorage');
-        } catch (e) {
-          console.log('[VTurb] Erro ao salvar no sessionStorage:', e);
-        }
-      };
-      
-      // Função que aguarda o React carregar
-      const waitForReact = () => {
-        const checkInterval = setInterval(() => {
-          if (findCTAElement()) {
-            clearInterval(checkInterval);
-            console.log('[VTurb] React carregado, elemento encontrado');
-            
-            // Verifica se já foi mostrado nesta sessão
-            try { 
-              if (sessionStorage.getItem('vturb_pitch_seen')==='1') {
-                console.log('[VTurb] CTA já foi vista nesta sessão, mostrando novamente');
-                show();
-              }
-            } catch (e) {
-              console.log('[VTurb] Erro ao verificar sessionStorage:', e);
+        // Função que procura o elemento #cta-section
+        const findCTAElement = () => {
+          if (!cta) {
+            cta = document.getElementById('cta-section');
+            if (cta) {
+              console.log('[VTurb] Elemento #cta-section encontrado!');
+            } else {
+              console.log('[VTurb] Elemento #cta-section ainda não encontrado, tentando novamente...');
             }
           }
-        }, 100);
+          return cta;
+        };
+
+        // Função que mostra a CTA
+        const show = () => {
+          console.log('[VTurb] Função show() chamada');
+          
+          if (isShown) {
+            console.log('[VTurb] CTA já está sendo exibida');
+            return;
+          }
+          
+          const ctaElement = findCTAElement();
+          if (!ctaElement) {
+            console.log('[VTurb] Elemento #cta-section não encontrado, tentando novamente em 500ms');
+            setTimeout(show, 500);
+            return;
+          }
+          
+          console.log('[VTurb] Mostrando CTA section');
+          ctaElement.classList.add('show');
+          ctaElement.classList.remove('hidden');
+          isShown = true;
+          
+          try {
+            sessionStorage.setItem('vturb_pitch_seen','1');
+            console.log('[VTurb] Estado salvo no sessionStorage');
+          } catch (e) {
+            console.log('[VTurb] Erro ao salvar no sessionStorage:', e);
+          }
+        };
         
-        // Timeout de segurança - para de procurar após 10 segundos
-        setTimeout(() => {
-          clearInterval(checkInterval);
-          console.log('[VTurb] Timeout: parou de procurar o elemento #cta-section');
-        }, 10000);
-      };
-    
-      // Aguarda o DOM estar pronto
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', waitForReact);
-      } else {
-        waitForReact();
-      }
-    
-      // Event listeners para o evento vturb_pitch
-      window.addEventListener('vturb_pitch', () => {
-        console.log('[VTurb] Evento vturb_pitch recebido!');
-        show();
-      });
-      
-      window.addEventListener('message', ev => {
-        const d = ev.data, t = (d && (d.type||d.event)) || d;
-        if (String(t).toLowerCase().includes('vturb_pitch')) {
-          console.log('[VTurb] Evento vturb_pitch recebido via message!', ev.data);
-          show();
+        // Função que aguarda o React carregar
+        const waitForReact = () => {
+          const checkInterval = setInterval(() => {
+            if (findCTAElement()) {
+              clearInterval(checkInterval);
+              console.log('[VTurb] React carregado, elemento encontrado');
+              
+              // Verifica se já foi mostrado nesta sessão
+              try {
+                if (sessionStorage.getItem('vturb_pitch_seen')==='1') {
+                  console.log('[VTurb] CTA já foi vista nesta sessão, mostrando novamente');
+                  show();
+                }
+              } catch (e) {
+                console.log('[VTurb] Erro ao verificar sessionStorage:', e);
+              }
+            }
+          }, 100);
+          
+          // Timeout de segurança - para de procurar após 10 segundos
+          setTimeout(() => {
+            clearInterval(checkInterval);
+            console.log('[VTurb] Timeout: parou de procurar o elemento #cta-section');
+          }, 10000);
+        };
+
+        // Aguarda o DOM estar pronto
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', waitForReact);
+        } else {
+          waitForReact();
         }
-      });
-      
-      console.log('[VTurb] Event listeners configurados');
+
+        // Event listeners para o evento vturb_pitch
+        window.addEventListener('vturb_pitch', () => {
+          console.log('[VTurb] Evento vturb_pitch recebido!');
+          show();
+        });
+        
+        window.addEventListener('message', ev => {
+          const d = ev.data, t = (d && (d.type||d.event)) || d;
+          if (String(t).toLowerCase().includes('vturb_pitch')) {
+            console.log('[VTurb] Evento vturb_pitch recebido via message!', ev.data);
+            show();
+          }
+        });
+
+        console.log('[VTurb] Event listeners configurados');
+      })();
     </script>
     
-    <!-- VTurb Smartplayer Script -->
-    <script type="text/javascript">
-      var s = document.createElement("script");
-      s.src = "https://scripts.converteai.net/d37be28a-dfe1-4a86-98a2-9c82944967ec/players/68b44bae6fe4730e992bed14/v4/player.js";
-      s.async = true;
-      document.head.appendChild(s);
-    </script>
 
   </head>
 
